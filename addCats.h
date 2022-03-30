@@ -15,7 +15,7 @@ extern int addCat( char nameToAdd[],
                    enum Gender isGender,
                    enum Breed isBreed,
                    bool isFixedNew,
-                   float weightNew,
+                   Weight weightNew,
                    enum Color collarColor1,
                    enum Color collarColor2,
                    unsigned long long license ) ;
