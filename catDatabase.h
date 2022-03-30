@@ -22,12 +22,14 @@ enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 
 enum Color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
 
+typedef float Weight;
+
 extern int currentNumberOfCats;
 
 struct Cat {
     char name[MAX_NAME_LENGTH];
     bool isFixed;
-    float weight;
+    Weight weight;
     int gender;
     int breed;
     int color1;
