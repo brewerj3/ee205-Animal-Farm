@@ -9,8 +9,8 @@
 /// @date   09_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdbool.h>
+#include <cstdio>
+
 
 #include "catDatabase.h"
 #include "addCats.h"

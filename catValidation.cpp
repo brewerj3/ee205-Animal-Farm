@@ -9,9 +9,8 @@
 /// @date   09_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <string.h>
-#include <stdbool.h>
-#include <stdio.h>
+#include <cstring>
+#include <cstdio>
 
 #include "catDatabase.h"
 #include "config.h"
