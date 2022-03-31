@@ -13,8 +13,7 @@
 
 #define MAX_NAME_LENGTH ( 50 )
 #define MAX_CATS ( 1024 )
-
-#include <stdbool.h>
+#define UNKNOWN_WEIGHT ( -1 )
 
 enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
 
@@ -35,6 +34,17 @@ struct Cat {
     int color1;
     int color2;
     unsigned long long license;
+};
+
+class CatClass {
+private:
+    char name{MAX_NAME_LENGTH};
+    enum Gender{};
+    enum Breed{};
+    bool isFixed;
+    Weight weight;
+public:
+    CatClass *nextCat;
 };
 
 extern struct Cat catsStruct[MAX_CATS];
