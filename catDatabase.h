@@ -40,12 +40,16 @@ class CatClass {
 private:
     char name{MAX_NAME_LENGTH};
     enum Gender{};
+    int genderOfCat;
     enum Breed{};
+    int breedOfCat;
     bool isFixed;
     Weight weight;
-
 public:
-    CatClass* next;
+    CatClass* next{};
+    CatClass();
+    void addCat(const char* newName[], Gender newGender, Breed newBreed, Weight newWeight);
+
 };
 
 extern struct Cat catsStruct[MAX_CATS];

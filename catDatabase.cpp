@@ -15,3 +15,18 @@
 int currentNumberOfCats=0;
 
 struct Cat catsStruct[MAX_CATS];
+
+CatClass::CatClass()
+{
+    genderOfCat = UNKNOWN_GENDER;
+    breedOfCat = UNKNOWN_BREED;
+    isFixed = false;
+    weight = UNKNOWN_WEIGHT;
+}
+void CatClass::addCat(const char* newName[], const Gender newGender, const Breed newBreed, const Weight newWeight)
+{
+    name = newName;
+    genderOfCat = newGender;
+    breedOfCat = newBreed;
+    weight = newWeight;
+}
