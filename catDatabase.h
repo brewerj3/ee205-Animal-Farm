@@ -43,8 +43,9 @@ private:
     enum Breed{};
     bool isFixed;
     Weight weight;
+
 public:
-    CatClass *nextCat;
+    CatClass* next;
 };
 
 extern struct Cat catsStruct[MAX_CATS];
