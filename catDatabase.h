@@ -57,7 +57,7 @@ public:
 
     int getBreedOfCat() const;
 
-    bool isFixed1() const;
+    bool getFixed() const;
 
     Weight getWeight() const;
 

@@ -46,7 +46,7 @@ int CatClass::getBreedOfCat() const {
     return breedOfCat;
 }
 
-bool CatClass::isFixed1() const {
+bool CatClass::getFixed() const {
     return isFixed;
 }
 
