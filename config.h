@@ -9,4 +9,4 @@
 /// @date   09_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#define PROGRAM_NAME "Animal Farm 1"
+#define PROGRAM_NAME "Animal Farm 2"
