@@ -45,11 +45,33 @@ private:
     int breedOfCat;
     bool isFixed;
     Weight weight;
+
 public:
     CatClass* next{};
     CatClass();
-    void addCat(const char* newName[], Gender newGender, Breed newBreed, Weight newWeight);
+    void addCat(const char newName[], Gender newGender, Breed newBreed, Weight newWeight);
+    //getters
+    char getName() const;
 
+    int getGenderOfCat() const;
+
+    int getBreedOfCat() const;
+
+    bool isFixed1() const;
+
+    Weight getWeight() const;
+
+    //setters
+
+    void setName(char name);
+
+    void setGenderOfCat(int genderOfCat);
+
+    void setBreedOfCat(int breedOfCat);
+
+    void setIsFixed(bool isFixed);
+
+    void setWeight(Weight weight);
 };
 
 extern struct Cat catsStruct[MAX_CATS];
