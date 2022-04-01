@@ -6,9 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(animalFarm
         main.cpp
         config.h
-        addCats.cpp addCats.h
-        catDatabase.cpp catDatabase.h
-        catValidation.cpp catValidation.h
-        deleteCats.cpp deleteCats.h
-        reportCats.cpp reportCats.h
-        updateCats.cpp updateCats.h)
+        catDatabase.cpp catDatabase.h)
