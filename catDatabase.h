@@ -39,10 +39,8 @@ struct Cat {
 class CatClass {
 private:
     char name{MAX_NAME_LENGTH};
-    enum Gender{};
-    int genderOfCat;
-    enum Breed{};
-    int breedOfCat;
+    Gender genderOfCat;
+    Breed breedOfCat;
     bool isFixed;
     Weight weight;
 
@@ -53,25 +51,25 @@ public:
     //getters
     char getName() const;
 
-    int getGenderOfCat() const;
+    Gender getGenderOfCat() const;
 
-    int getBreedOfCat() const;
+    Breed getBreedOfCat() const;
 
-    bool getFixed() const;
+    bool getFixedState() const;
 
     Weight getWeight() const;
 
     //setters
-
     void setName(char name);
 
-    void setGenderOfCat(int genderOfCat);
+    void setGenderOfCat(Gender genderToSet);
 
-    void setBreedOfCat(int breedOfCat);
+    void setBreedOfCat(Breed breedToSet);
 
-    void setIsFixed(bool isFixed);
+    void setIsFixed(bool fixedStateToSet);
 
-    void setWeight(Weight weight);
+    void setWeight(Weight weightToSet);
+
 };
 
 extern struct Cat catsStruct[MAX_CATS];

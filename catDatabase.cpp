@@ -9,6 +9,8 @@
 /// @date   09_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <iostream>
+
 #include "catDatabase.h"
 #include "config.h"
 
@@ -25,28 +27,28 @@ CatClass::CatClass()
     weight = UNKNOWN_WEIGHT;
 }
 
-void CatClass::addCat(const char *newName, CatClass::Gender newGender, CatClass::Breed newBreed, Weight newWeight)
+void CatClass::addCat(const char newName[], Gender newGender, Breed newBreed, Weight newWeight)
 {
     CatClass::name = newName;
-    genderOfCat = newGender;
-    breedOfCat = newBreed;
-    isFixed = false;
-    weight = newWeight;
+    CatClass::genderOfCat = newGender;
+    CatClass::breedOfCat = newBreed;
+    CatClass::isFixed = false;
+    CatClass::weight = newWeight;
 }
 
 char CatClass::getName() const {
     return name;
 }
 
-int CatClass::getGenderOfCat() const {
+Gender CatClass::getGenderOfCat() const {
     return genderOfCat;
 }
 
-int CatClass::getBreedOfCat() const {
+Breed CatClass::getBreedOfCat() const {
     return breedOfCat;
 }
 
-bool CatClass::getFixed() const {
+bool CatClass::getFixedState() const {
     return isFixed;
 }
 
@@ -54,22 +56,22 @@ Weight CatClass::getWeight() const {
     return weight;
 }
 
-void CatClass::setName(char newName) {
-    CatClass::name = newName;
+void CatClass::setName(char name) {
+    CatClass::name = name;
 }
 
-void CatClass::setGenderOfCat(int newGender) {
-    CatClass::genderOfCat = newGender;
+void CatClass::setGenderOfCat(Gender genderToSet) {
+    CatClass::genderOfCat = genderToSet;
 }
 
-void CatClass::setBreedOfCat(int newBreed) {
-    CatClass::breedOfCat = newBreed;
+void CatClass::setBreedOfCat(Breed breedToSet) {
+    CatClass::breedOfCat = breedToSet;
 }
 
-void CatClass::setIsFixed(bool fixed) {
-    CatClass::isFixed = fixed;
+void CatClass::setIsFixed(bool fixedStateToSet) {
+    CatClass::isFixed = fixedStateToSet;
 }
 
-void CatClass::setWeight(Weight newWeight) {
-    CatClass::weight = newWeight;
+void CatClass::setWeight(Weight weightToSet) {
+    CatClass::weight = weightToSet;
 }
