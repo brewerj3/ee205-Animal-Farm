@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <cstring>
 
 #include "catDatabase.h"
 #include "config.h"
@@ -27,16 +28,16 @@ CatClass::CatClass()
     CatClass::weight = UNKNOWN_WEIGHT;
 }
 
-void CatClass::addCat(const char newName[], Gender newGender, Breed newBreed, Weight newWeight)
+void CatClass::addCat( char newName[], Gender newGender, Breed newBreed, Weight newWeight)
 {
-    CatClass::name = newName;
-    CatClass::genderOfCat = newGender;
-    CatClass::breedOfCat = newBreed;
+    setNameOfCat( nullptr );
+    CatClass::genderOfCat = UNKNOWN_GENDER;
+    CatClass::breedOfCat = UNKNOWN_BREED;
     CatClass::isFixed = false;
-    CatClass::weight = newWeight;
+    CatClass::weight = UNKNOWN_WEIGHT;
 }
 
-char CatClass::getName() const {
+const char *CatClass::getName() const {
     return name;
 }
 
@@ -48,16 +49,12 @@ Breed CatClass::getBreedOfCat() const {
     return breedOfCat;
 }
 
-bool CatClass::getFixedState() const {
+bool CatClass::getIsFixed() const {
     return isFixed;
 }
 
 Weight CatClass::getWeight() const {
     return weight;
-}
-
-void CatClass::setName(char name) {
-    CatClass::name = name;
 }
 
 void CatClass::setGenderOfCat(Gender genderToSet) {
@@ -68,10 +65,23 @@ void CatClass::setBreedOfCat(Breed breedToSet) {
     CatClass::breedOfCat = breedToSet;
 }
 
-void CatClass::setIsFixed(bool fixedStateToSet) {
-    CatClass::isFixed = fixedStateToSet;
+void CatClass::setIsFixed(bool isFixedToSet) {
+    CatClass::isFixed = isFixedToSet;
 }
 
 void CatClass::setWeight(Weight weightToSet) {
     CatClass::weight = weightToSet;
+}
+
+void CatClass::setNameOfCat( char newName[] ) {
+    strcpy( CatClass::name, newName);
+}
+
+void CatClass::print() {
+
+}
+
+bool CatClass::validate() {
+
+    return false;
 }

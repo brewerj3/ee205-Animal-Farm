@@ -38,7 +38,7 @@ struct Cat {
 
 class CatClass {
 private:
-    char name{MAX_NAME_LENGTH};
+    char name[MAX_NAME_LENGTH];
     Gender genderOfCat;
     Breed breedOfCat;
     bool isFixed;
@@ -47,28 +47,35 @@ private:
 public:
     CatClass* next{};
     CatClass();
-    void addCat(const char newName[], Gender newGender, Breed newBreed, Weight newWeight);
+    void addCat( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
     //getters
-    char getName() const;
+
+    const char *getName() const;
 
     Gender getGenderOfCat() const;
 
     Breed getBreedOfCat() const;
 
-    bool getFixedState() const;
+    bool getIsFixed() const;
 
     Weight getWeight() const;
 
     //setters
-    void setName(char name);
-
+    void setNameOfCat( char newName[] );
     void setGenderOfCat(Gender genderToSet);
 
     void setBreedOfCat(Breed breedToSet);
 
-    void setIsFixed(bool fixedStateToSet);
+    void setIsFixed(bool isFixedToSet);
 
     void setWeight(Weight weightToSet);
+
+    // Print Method
+    void print();
+
+    // Validation Method
+    bool validate();
+
 
 };
 
