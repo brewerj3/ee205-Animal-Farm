@@ -28,7 +28,7 @@ CatClass::CatClass()
     CatClass::weight = UNKNOWN_WEIGHT;
 }
 
-void CatClass::addCat( char newName[], Gender newGender, Breed newBreed, Weight newWeight)
+CatClass::CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight)
 {
     setNameOfCat( nullptr );
     CatClass::genderOfCat = UNKNOWN_GENDER;

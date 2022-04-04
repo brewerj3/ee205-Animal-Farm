@@ -49,7 +49,7 @@ private:
 public:
     CatClass* next{};
     CatClass();
-    void addCat( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
+    CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
     //getters
 
     const char *getName() const;
