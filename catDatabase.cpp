@@ -88,6 +88,9 @@ bool CatClass::validate() {
     if( CatClass::name == "" ) {
         return false;
     }
+    if(sizeof(CatClass::name) > MAX_NAME_LENGTH){
+        return false;
+    }
     if( ( CatClass::genderOfCat < 0 ) || ( CatClass::genderOfCat > 2 ) ) {
         return false;
     }
