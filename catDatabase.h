@@ -44,6 +44,8 @@ private:
     bool isFixed;
     Weight weight;
 
+
+
 public:
     CatClass* next{};
     CatClass();
@@ -62,9 +64,6 @@ public:
 
     //setters
     void setNameOfCat( char newName[] );
-    void setGenderOfCat(Gender genderToSet);
-
-    void setBreedOfCat(Breed breedToSet);
 
     void setIsFixed(bool isFixedToSet);
 
@@ -76,7 +75,11 @@ public:
     // Validation Method
     bool validate();
 
+protected:
+    //protected setters
+    void setGenderOfCat(Gender genderToSet);
 
+    void setBreedOfCat(Breed breedToSet);
 };
 
 extern struct Cat catsStruct[MAX_CATS];

@@ -82,6 +82,19 @@ void CatClass::print() {
 }
 
 bool CatClass::validate() {
-
-    return false;
+    if( CatClass::name == nullptr ) {
+        return false;
+    }
+    if( CatClass::name == "" ) {
+        return false;
+    }
+    if( ( CatClass::genderOfCat < 0 ) || ( CatClass::genderOfCat > 2 ) ) {
+        return false;
+    }
+    if( ( CatClass::breedOfCat < 0 ) || ( CatClass::breedOfCat > 5 ) ) {
+        return false;
+    }
+    if( CatClass::weight <= 0 ) {
+        return false;
+    }
 }
