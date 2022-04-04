@@ -10,7 +10,8 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <cstdio>
-
+#include <iostream>
+using namespace std;
 
 #include "catDatabase.h"
 #include "addCats.h"
@@ -20,7 +21,7 @@
 #include "config.h"
 
 int main(){
-    printf( "Starting %s \n", PROGRAM_NAME );
+    cout << "Starting " << PROGRAM_NAME << endl;
 
     //addCat( "Loki",   MALE,           PERSIAN,    true,  8.5,   BLACK,  WHITE,  101 );
     //addCat( "Milo",   MALE,           MANX,       true,  7.0,   BLACK,  RED,    102 );
@@ -53,5 +54,5 @@ int main(){
     //deleteAllCats();
     //printAllCats();
 
-    printf( "Done with %s \n", PROGRAM_NAME );
+    cout << "Done with " << PROGRAM_NAME << endl;
 }

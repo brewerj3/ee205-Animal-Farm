@@ -22,19 +22,20 @@ struct Cat catsStruct[MAX_CATS];
 CatClass::CatClass()
 {
     setNameOfCat( nullptr );
-    CatClass::genderOfCat = UNKNOWN_GENDER;
-    CatClass::breedOfCat = UNKNOWN_BREED;
-    CatClass::isFixed = false;
-    CatClass::weight = UNKNOWN_WEIGHT;
+    name = nullptr;
+    genderOfCat = UNKNOWN_GENDER;
+    breedOfCat = UNKNOWN_BREED;
+    isFixed = false;
+    weight = UNKNOWN_WEIGHT;
 }
 
 CatClass::CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight)
 {
     setNameOfCat( nullptr );
-    CatClass::genderOfCat = UNKNOWN_GENDER;
-    CatClass::breedOfCat = UNKNOWN_BREED;
-    CatClass::isFixed = false;
-    CatClass::weight = UNKNOWN_WEIGHT;
+    genderOfCat = UNKNOWN_GENDER;
+    breedOfCat = UNKNOWN_BREED;
+    isFixed = false;
+    weight = UNKNOWN_WEIGHT;
 }
 
 const char *CatClass::getName() const {
