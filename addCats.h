@@ -6,16 +6,13 @@
 /// @version 1.0
 ///
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
-/// @date   09_Mar_2022
+/// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #pragma once
 
 extern int addCat( char nameToAdd[],
-                   enum Gender isGender,
-                   enum Breed isBreed,
+                   Gender isGender,
+                   Breed isBreed,
                    bool isFixedNew,
-                   Weight weightNew,
-                   enum Color collarColor1,
-                   enum Color collarColor2,
-                   unsigned long long license ) ;
+                   Weight weightNew ) ;
