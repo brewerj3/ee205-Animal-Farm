@@ -21,7 +21,7 @@ struct Cat catsStruct[MAX_CATS];
 
 CatClass::CatClass()
 {
-    //name =''; make this work later.
+    setNameOfCat( nullptr );
     CatClass::genderOfCat = UNKNOWN_GENDER;
     CatClass::breedOfCat = UNKNOWN_BREED;
     CatClass::isFixed = false;
@@ -97,4 +97,5 @@ bool CatClass::validate() {
     if( CatClass::weight <= 0 ) {
         return false;
     }
+    return true;
 }
