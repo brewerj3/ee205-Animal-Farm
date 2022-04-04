@@ -25,4 +25,8 @@ int addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, W
     newCat.setNameOfCat( nameToAdd );
     newCat.setWeight( weightNew );
     newCat.setIsFixed( isFixedNew );
+    newCat.setGenderOfCat( isGender );
+    newCat.setBreedOfCat( isBreed );
+    newCat.validate();
+
 }

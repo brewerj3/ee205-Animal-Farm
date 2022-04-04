@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <cstring>
+using namespace std;
 
 #include "catDatabase.h"
 #include "config.h"
@@ -22,7 +23,6 @@ struct Cat catsStruct[MAX_CATS];
 CatClass::CatClass()
 {
     setNameOfCat( nullptr );
-    name = nullptr;
     genderOfCat = UNKNOWN_GENDER;
     breedOfCat = UNKNOWN_BREED;
     isFixed = false;
@@ -83,22 +83,28 @@ void CatClass::print() {
 }
 
 bool CatClass::validate() {
-    if( CatClass::name == nullptr ) {
+    if( name == nullptr ) {
+        cout << "Invalid Cat name" << endl;
         return false;
     }
-    if( CatClass::name == "" ) {
+    if( name == "" ) {
+        cout << "Invalid Cat name" << endl;
         return false;
     }
-    if(sizeof(CatClass::name) > MAX_NAME_LENGTH){
+    if(sizeof(name) > MAX_NAME_LENGTH){
+        cout << "Invalid Cat name" << endl;
         return false;
     }
-    if( ( CatClass::genderOfCat < 0 ) || ( CatClass::genderOfCat > 2 ) ) {
+    if( ( genderOfCat < 0 ) || ( genderOfCat > 2 ) ) {
+        cout << "Invalid Cat Gender" << endl;
         return false;
     }
-    if( ( CatClass::breedOfCat < 0 ) || ( CatClass::breedOfCat > 5 ) ) {
+    if( ( breedOfCat < 0 ) || ( breedOfCat > 5 ) ) {
+        cout << "Invalid Cat Breed" << endl;
         return false;
     }
-    if( CatClass::weight <= 0 ) {
+    if( weight <= 0 ) {
+        cout << "Invalid Cat weight" << endl;
         return false;
     }
     return true;

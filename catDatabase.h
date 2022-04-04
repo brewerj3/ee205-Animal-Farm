@@ -75,7 +75,7 @@ public:
     // Validation Method
     bool validate();
 
-protected:
+//protected: @TODO fix these and make them protected later
     //protected setters
     void setGenderOfCat(Gender genderToSet);
 
