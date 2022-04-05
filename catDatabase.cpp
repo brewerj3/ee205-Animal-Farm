@@ -18,7 +18,7 @@ using namespace std;
 
 int currentNumberOfCats=0;
 
-struct Cat catsStruct[MAX_CATS];
+
 
 CatClass::CatClass()
 {

@@ -25,17 +25,6 @@ typedef float Weight;
 
 extern int currentNumberOfCats;
 
-struct Cat {
-    char name[MAX_NAME_LENGTH];
-    bool isFixed;
-    Weight weight;
-    int gender;
-    int breed;
-    int color1;
-    int color2;
-    unsigned long long license;
-};
-
 class CatClass {
 private:
     char name[MAX_NAME_LENGTH];
@@ -43,15 +32,14 @@ private:
     Breed breedOfCat;
     bool isFixed;
     Weight weight;
-
-
+    CatClass* catDatabaseHeadPointer;
 
 public:
-    CatClass* next{};
+    CatClass* next = nullptr;
     CatClass();
     CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
-    //getters
 
+    //getters
     const char *getName() const;
 
     Gender getGenderOfCat() const;
@@ -81,5 +69,3 @@ public:
 
     void setBreedOfCat(Breed breedToSet);
 };
-
-extern struct Cat catsStruct[MAX_CATS];
