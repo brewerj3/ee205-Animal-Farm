@@ -59,28 +59,26 @@ Weight CatClass::getWeight() const {
 }
 
 void CatClass::setGenderOfCat(Gender genderToSet) {
-    CatClass::genderOfCat = genderToSet;
+    genderOfCat = genderToSet;
 }
 
 void CatClass::setBreedOfCat(Breed breedToSet) {
-    CatClass::breedOfCat = breedToSet;
+    breedOfCat = breedToSet;
 }
 
 void CatClass::setIsFixed(bool isFixedToSet) {
-    CatClass::isFixed = isFixedToSet;
+    isFixed = isFixedToSet;
 }
 
 void CatClass::setWeight(Weight weightToSet) {
-    CatClass::weight = weightToSet;
+    weight = weightToSet;
 }
 
 void CatClass::setNameOfCat( char newName[] ) {
-    strcpy( CatClass::name, newName);
+    strcpy( name, newName);
 }
 
-void CatClass::print() {
 
-}
 
 bool CatClass::validate() {
     if( name == nullptr ) {

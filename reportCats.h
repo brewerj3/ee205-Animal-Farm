@@ -11,9 +11,9 @@
 
 #pragma once
 
-extern char* colorCollar( int color );
+//extern char* colorCollar( int color );
 
-extern char* genderOfCat( int gender );
+extern char* genderName( int gender );
 
 extern void printCat( int index );
 

@@ -14,6 +14,7 @@
 #define MAX_NAME_LENGTH ( 50 )
 #define MAX_CATS ( 1024 )
 #define UNKNOWN_WEIGHT ( -1 )
+#define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
 
 enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
 
@@ -58,7 +59,7 @@ public:
     void setWeight(Weight weightToSet);
 
     // Print Method
-    void print();
+    bool print();
 
     // Validation Method
     bool validate();
