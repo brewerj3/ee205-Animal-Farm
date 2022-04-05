@@ -20,7 +20,7 @@
 #include "catValidation.h"
 
 int addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase(head);
+    validateDatabase();
     CatClass newCat;
     newCat.setNameOfCat( nameToAdd );
     newCat.setWeight( weightNew );
