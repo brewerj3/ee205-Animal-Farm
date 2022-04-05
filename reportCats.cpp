@@ -78,8 +78,14 @@ bool CatClass::print() {
     FORMAT_LINE( "Cat", "name" ) << getName() << endl ;
     FORMAT_LINE( "Cat", "gender" ) << genderName( getGenderOfCat() ) << endl ;
     FORMAT_LINE( "Cat", "breed" ) << breedName( getBreedOfCat() ) << endl ;
-    FORMAT_LINE( "Cat", "isFixed" ) << isFixed() << endl ;
+    FORMAT_LINE( "Cat", "isFixed" ) << getIsFixed() << endl ;
     FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
 
     return true;
+}
+void printAllCats( CatClass* n ){
+    while( n != NULL ) {
+        n->print();
+        n = n->next;
+    }
 }
