@@ -11,12 +11,4 @@
 
 #pragma once
 
-extern int catNameExists( const int index, char nameToCheckAgainst[] ) ;
-
-extern int checkForEmptyName( const int index ) ;
-
-extern bool isValidIndex( const int index ) ;
-
-extern bool isValidWeight( const Weight checkWeight ) ;
-
-extern bool isValidName(char nameToCheck[] ) ;
+extern bool validateDatabase(CatClass* n ) ;

@@ -10,8 +10,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <cstring>
-#include <cstdio>
+
 
 #include "catDatabase.h"
 #include "config.h"
 
+bool validateDatabase( CatClass* n) {
+    while( n != NULL ) {
+        if(n->validate() == false ){
+            return false;
+        }
+        n = n->next;
+    }
+    return true;
+}
