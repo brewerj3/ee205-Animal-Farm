@@ -7,4 +7,5 @@ add_executable(animalFarm
         main.cpp
         config.h
         catDatabase.cpp catDatabase.h
-        addCats.cpp addCats.h)
+        addCats.cpp addCats.h
+        catValidation.cpp catValidation.h)

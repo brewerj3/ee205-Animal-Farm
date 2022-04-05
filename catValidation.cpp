@@ -16,7 +16,7 @@
 #include "config.h"
 
 bool validateDatabase( CatClass* n) {
-    while( n != NULL ) {
+    while( n != nullptr ) {
         if(n->validate() == false ){
             return false;
         }
