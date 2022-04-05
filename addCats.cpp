@@ -9,10 +9,10 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+
 
 #include "catDatabase.h"
 #include "addCats.h"
@@ -20,7 +20,7 @@
 #include "catValidation.h"
 
 int addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    //validateDatabase @TODO
+    validateDatabase(head);
     CatClass newCat;
     newCat.setNameOfCat( nameToAdd );
     newCat.setWeight( weightNew );
