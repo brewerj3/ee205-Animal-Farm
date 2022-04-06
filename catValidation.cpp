@@ -44,16 +44,15 @@ bool CatClass::validate() {
     return true;
 }
 
-bool validateDatabase( CatClass** head ) {
+bool validateDatabase( CatClass* node ) {
     cout << "Validating Database" << endl;
-    CatClass *last = *head;
-    cout << "created last pointer to point to last object in linked list" << endl;
-    while( last->next != nullptr ) {
-        if(!last->validate()){
+    while( node != nullptr ) {
+        cout << "In while loop" << endl;
+        if(!node->validate()){
             cout << "This Cat is invalid" << endl;
             return false;
         }
-        last = last->next;
+        node = node->next;
     }
     return true;
 }
