@@ -75,3 +75,37 @@ void CatClass::setWeight(Weight weightToSet) {
 void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
 }
+
+bool CatClass::validateName(const char *newName) {
+    if(strcmp(newName, nullptr) == 0){
+        return false;
+    }
+    if(strcmp(newName, "") == 0){
+        return false;
+    }
+    if(sizeof(newName) >= MAX_NAME_LENGTH){
+        return false;
+    }
+    return true;
+}
+
+bool CatClass::validateGender(const Gender newGender) {
+    if(newGender == UNKNOWN_GENDER){
+        return false;
+    }
+    return true;
+}
+
+bool CatClass::validateBreed(const Breed newBreed) {
+    if(newBreed == UNKNOWN_BREED){
+        return false;
+    }
+    return true;
+}
+
+bool CatClass::validateWeight(const Weight newWeight) {
+    if(newWeight <= 0){
+        return false;
+    }
+    return true;
+}

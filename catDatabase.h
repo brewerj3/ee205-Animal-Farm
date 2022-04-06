@@ -65,6 +65,14 @@ public:
     // Validation Method
     bool validate();
 
+    static bool validateName(const char *newName);
+
+    static bool validateGender(const Gender newGender);
+
+    static bool validateBreed(const Breed newBreed);
+
+    static bool validateWeight(const Weight newWeight);
+
 //protected: @TODO fix these and make them protected later
     //protected setters
     void setGenderOfCat(Gender genderToSet);

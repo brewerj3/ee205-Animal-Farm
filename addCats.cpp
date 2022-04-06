@@ -22,7 +22,7 @@ bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, 
     validateDatabase( *head );
     cout << "validated" << endl;
     CatClass* newCat = new CatClass();
-    cout << "added new CatClass()" << endl;
+    cout << "added new CatClass()" << endl; //@TODO remove before final
     CatClass *last = *head;
     cout << "adding data to newCat" << endl;
     newCat->setNameOfCat( nameToAdd );
