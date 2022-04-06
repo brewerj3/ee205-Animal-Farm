@@ -23,7 +23,7 @@ bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, 
     validateDatabase();
 
     CatClass* newCat = new CatClass();
-    CatClass last = catDatabaseHeadPointer;
+    CatClass* last = reinterpret_cast<CatClass *>(&catDatabaseHeadPointer);
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );
