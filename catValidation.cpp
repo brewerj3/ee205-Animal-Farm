@@ -44,8 +44,8 @@ bool CatClass::validate() {
     return true;
 }
 
-bool validateDatabase() {
-    CatClass *last = *catDatabaseHeadPointer;
+bool validateDatabase( CatClass** head ) {
+    CatClass *last = *head;
     while( last->next != nullptr ) {
         if(!last->validate()){
             return false;

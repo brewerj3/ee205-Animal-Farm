@@ -20,7 +20,7 @@
 #include "catValidation.h"
 
 bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase();
+    validateDatabase( &catDatabaseHeadPointer );
 
     CatClass* newCat = new CatClass();
     CatClass *last = *head;
