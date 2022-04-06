@@ -65,9 +65,6 @@ public:
     // Validation Method
     bool validate();
 
-    // Find end of current linked list
-    void findEndOfList();
-
 //protected: @TODO fix these and make them protected later
     //protected setters
     void setGenderOfCat(Gender genderToSet);
@@ -75,4 +72,4 @@ public:
     void setBreedOfCat(Breed breedToSet);
 };
 
-CatClass* catDatabaseHeadPointer = nullptr;
+CatClass** catDatabaseHeadPointer = nullptr;

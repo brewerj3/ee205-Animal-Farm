@@ -20,19 +20,20 @@
 #include "catValidation.h"
 
 bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase(catDatabaseHeadPointer );
+    validateDatabase();
 
     CatClass* newCat = new CatClass();
-    CatClass* last = catDatabaseHeadPointer;
+    CatClass *last = *catDatabaseHeadPointer;
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );
     newCat->setGenderOfCat( isGender );
     newCat->setBreedOfCat( isBreed );
     newCat->validate();
+    newCat->next = nullptr;
     currentNumberOfCats++;
-    if(catDatabaseHeadPointer == nullptr ) {
-        catDatabaseHeadPointer = newCat;
+    if(*catDatabaseHeadPointer == nullptr ) {
+        *catDatabaseHeadPointer = newCat;
         return true;
     }
     while( last->next != nullptr ){

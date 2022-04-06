@@ -75,11 +75,3 @@ void CatClass::setWeight(Weight weightToSet) {
 void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
 }
-
-CatClass * findEndOfList() {
-    CatClass* n = catDatabaseHeadPointer;
-    while ( n != nullptr){
-        n = n->next;
-    }
-    return n;
-}

@@ -44,13 +44,13 @@ bool CatClass::validate() {
     return true;
 }
 
-bool validateDatabase( CatClass* n ) {
-
-    while( n != nullptr ) {
-        if(n->validate() == false ){
+bool validateDatabase() {
+    CatClass *last = *catDatabaseHeadPointer;
+    while( last->next != nullptr ) {
+        if(!last->validate()){
             return false;
         }
-        n = n->next;
+        last = last->next;
     }
     return true;
 }
