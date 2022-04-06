@@ -75,3 +75,5 @@ void CatClass::setWeight(Weight weightToSet) {
 void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
 }
+
+CatClass **catDatabaseHeadPointer = nullptr;

@@ -72,4 +72,4 @@ public:
     void setBreedOfCat(Breed breedToSet);
 };
 
-CatClass** catDatabaseHeadPointer = nullptr;
+extern CatClass **catDatabaseHeadPointer;
