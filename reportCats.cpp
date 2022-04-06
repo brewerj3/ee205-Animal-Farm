@@ -84,7 +84,7 @@ bool CatClass::print() {
     return true;
 }
 void printAllCats( CatClass* n ){
-    while( n != NULL ) {
+    while( n != nullptr ) {
         n->print();
         n = n->next;
     }

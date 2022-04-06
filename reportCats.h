@@ -17,6 +17,6 @@ extern char* genderName( int gender );
 
 extern void printCat( int index );
 
-extern void printAllCats();
+extern void printAllCats(CatClass **pClass);
 
 extern int findCats( char nameToFind[] );
