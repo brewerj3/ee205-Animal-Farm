@@ -11,7 +11,7 @@
 
 #pragma once
 
-extern int addCat( char nameToAdd[],
+extern bool addCat( char nameToAdd[],
                    Gender isGender,
                    Breed isBreed,
                    bool isFixedNew,

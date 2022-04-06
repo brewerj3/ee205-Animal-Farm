@@ -19,7 +19,7 @@
 #include "config.h"
 #include "catValidation.h"
 
-int addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
+bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
     validateDatabase();
     CatClass newCat;
     newCat.setNameOfCat( nameToAdd );
@@ -29,4 +29,5 @@ int addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, W
     newCat.setBreedOfCat( isBreed );
     newCat.validate();
 
+    return true;
 }
