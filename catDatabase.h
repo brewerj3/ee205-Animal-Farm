@@ -33,10 +33,11 @@ private:
     Breed breedOfCat;
     bool isFixed;
     Weight weight;
-    CatClass* catDatabaseHeadPointer;
+
 
 public:
     CatClass* next = nullptr;
+    CatClass* catDatabaseHeadPointer = nullptr;
     CatClass();
     CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
 

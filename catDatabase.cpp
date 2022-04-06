@@ -18,8 +18,6 @@ using namespace std;
 
 int currentNumberOfCats=0;
 
-
-
 CatClass::CatClass()
 {
     setNameOfCat( nullptr );
