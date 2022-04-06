@@ -9,11 +9,40 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstring>
-
+#include <iostream>
+using namespace std;
 
 #include "catDatabase.h"
 #include "config.h"
+
+
+bool CatClass::validate() {
+    if( name == nullptr ) {
+        cout << "Invalid Cat name" << endl;
+        return false;
+    }
+    if( name == "" ) {
+        cout << "Invalid Cat name" << endl;
+        return false;
+    }
+    if(sizeof(name) > MAX_NAME_LENGTH){
+        cout << "Invalid Cat name" << endl;
+        return false;
+    }
+    if( ( genderOfCat < 0 ) || ( genderOfCat > 2 ) ) {
+        cout << "Invalid Cat Gender" << endl;
+        return false;
+    }
+    if( ( breedOfCat < 0 ) || ( breedOfCat > 5 ) ) {
+        cout << "Invalid Cat Breed" << endl;
+        return false;
+    }
+    if( weight <= 0 ) {
+        cout << "Invalid Cat weight" << endl;
+        return false;
+    }
+    return true;
+}
 
 bool validateDatabase( CatClass* n ) {
 

@@ -36,8 +36,8 @@ private:
 
 
 public:
-    CatClass* next = nullptr;
-    CatClass* catDatabaseHeadPointer = nullptr;
+    CatClass *next = nullptr;
+
     CatClass();
     CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight);
 
@@ -65,6 +65,9 @@ public:
     // Validation Method
     bool validate();
 
+    // Find end of current linked list
+    void findEndOfList();
+
 //protected: @TODO fix these and make them protected later
     //protected setters
     void setGenderOfCat(Gender genderToSet);
@@ -72,3 +75,4 @@ public:
     void setBreedOfCat(Breed breedToSet);
 };
 
+CatClass* catDatabaseHeadPointer = nullptr;

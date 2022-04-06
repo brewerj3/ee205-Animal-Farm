@@ -18,8 +18,6 @@ using namespace std;
 
 int currentNumberOfCats=0;
 
-
-
 CatClass::CatClass()
 {
     setNameOfCat( nullptr );
@@ -78,32 +76,10 @@ void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
 }
 
-
-
-bool CatClass::validate() {
-    if( name == nullptr ) {
-        cout << "Invalid Cat name" << endl;
-        return false;
+CatClass * findEndOfList() {
+    CatClass* n = catDatabaseHeadPointer;
+    while ( n != nullptr){
+        n = n->next;
     }
-    if( name == "" ) {
-        cout << "Invalid Cat name" << endl;
-        return false;
-    }
-    if(sizeof(name) > MAX_NAME_LENGTH){
-        cout << "Invalid Cat name" << endl;
-        return false;
-    }
-    if( ( genderOfCat < 0 ) || ( genderOfCat > 2 ) ) {
-        cout << "Invalid Cat Gender" << endl;
-        return false;
-    }
-    if( ( breedOfCat < 0 ) || ( breedOfCat > 5 ) ) {
-        cout << "Invalid Cat Breed" << endl;
-        return false;
-    }
-    if( weight <= 0 ) {
-        cout << "Invalid Cat weight" << endl;
-        return false;
-    }
-    return true;
+    return n;
 }

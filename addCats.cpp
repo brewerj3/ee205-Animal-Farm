@@ -20,21 +20,24 @@
 #include "catValidation.h"
 
 bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    //validateDatabase(next );
-    CatClass newCat;
-    newCat.setNameOfCat( nameToAdd );
-    newCat.setWeight( weightNew );
-    newCat.setIsFixed( isFixedNew );
-    newCat.setGenderOfCat( isGender );
-    newCat.setBreedOfCat( isBreed );
-    newCat.validate();
-    if(currentNumberOfCats == 0 ) {
-        CatClass::catDatabaseHeadPointer->next;
-    }
-    if( (currentNumberOfCats > 0 ) && (currentNumberOfCats < MAX_CATS) ){
+    validateDatabase(catDatabaseHeadPointer );
 
-    }
+    CatClass* newCat = new CatClass();
+    CatClass* last = catDatabaseHeadPointer;
+    newCat->setNameOfCat( nameToAdd );
+    newCat->setWeight( weightNew );
+    newCat->setIsFixed( isFixedNew );
+    newCat->setGenderOfCat( isGender );
+    newCat->setBreedOfCat( isBreed );
+    newCat->validate();
     currentNumberOfCats++;
-
+    if(catDatabaseHeadPointer == nullptr ) {
+        catDatabaseHeadPointer = newCat;
+        return true;
+    }
+    while( last->next != nullptr ){
+        last = last->next;
+    }
+    last->next = newCat;
     return true;
 }
