@@ -50,6 +50,7 @@ bool validateDatabase( CatClass** head ) {
     cout << "created last pointer to point to last object in linked list" << endl;
     while( last->next != nullptr ) {
         if(!last->validate()){
+            cout << "This Cat is invalid" << endl;
             return false;
         }
         last = last->next;
