@@ -9,9 +9,8 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstdio>
-#include <cstdlib>
-#include <cstring>
+#include <iostream>
+using namespace std;
 
 
 #include "catDatabase.h"
@@ -24,6 +23,7 @@ bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, 
 
     CatClass* newCat = new CatClass();
     CatClass *last = *head;
+    cout << "adding data to newCat" << endl;
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );
