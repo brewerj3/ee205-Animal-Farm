@@ -47,6 +47,7 @@ bool CatClass::validate() {
 bool validateDatabase( CatClass** head ) {
     cout << "Validating Database" << endl;
     CatClass *last = *head;
+    cout << "created last pointer to point to last object in linked list" << endl;
     while( last->next != nullptr ) {
         if(!last->validate()){
             return false;
