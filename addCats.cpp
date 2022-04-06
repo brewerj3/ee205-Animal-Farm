@@ -19,9 +19,10 @@ using namespace std;
 #include "catValidation.h"
 
 bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase( catDatabaseHeadPointer );
-
+    validateDatabase( *head );
+    cout << "validated" << endl;
     CatClass* newCat = new CatClass();
+    cout << "added new CatClass()" << endl;
     CatClass *last = *head;
     cout << "adding data to newCat" << endl;
     newCat->setNameOfCat( nameToAdd );
@@ -33,8 +34,8 @@ bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, 
     newCat->next = nullptr;
     currentNumberOfCats++;
 
-    if(catDatabaseHeadPointer == nullptr ) {
-        catDatabaseHeadPointer = newCat;
+    if(*head == nullptr ) {
+        *head = newCat;
         return true;
     }
     while( last->next != nullptr ){

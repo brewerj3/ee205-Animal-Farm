@@ -22,15 +22,15 @@ using namespace std;
 
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
-
-    addCat( "Loki", &catDatabaseHeadPointer,  MALE,           PERSIAN,    true,  8.5 );
+    CatClass* head = nullptr;
+    addCat( "Loki", &head,  MALE,           PERSIAN,    true,  8.5 );
     //addCat( "Milo",   MALE,           MANX,       true,  7.0,   BLACK,  RED,    102 );
     //addCat( "Bella",  FEMALE,         MAINE_COON, true,  18.2,  BLACK,  BLUE,   103 );
     //addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2,   BLACK,  GREEN,  104 );
     //addCat( "Trin",   FEMALE,         MANX,       true,  12.2,  BLACK,  PINK,   105 );
     //addCat( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  false, 19.0,  WHITE,  BLACK,  106 );
     //addCat( "Tybalt", MALE,           SPHYNX,     true,  7.9,   WHITE,  WHITE,  107 );
-    printAllCats( catDatabaseHeadPointer );
+    printAllCats( head );
 
 
     cout << "Done with " << PROGRAM_NAME << endl;

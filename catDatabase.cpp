@@ -20,7 +20,7 @@ int currentNumberOfCats=0;
 
 CatClass::CatClass()
 {
-    setNameOfCat( nullptr );
+    name[0]=0;
     genderOfCat = UNKNOWN_GENDER;
     breedOfCat = UNKNOWN_BREED;
     isFixed = false;
@@ -75,5 +75,3 @@ void CatClass::setWeight(Weight weightToSet) {
 void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
 }
-
-CatClass *catDatabaseHeadPointer = nullptr;

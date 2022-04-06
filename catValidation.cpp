@@ -54,5 +54,6 @@ bool validateDatabase( CatClass *node ) {
         }
         node = node->next;
     }
+    cout << "Database is Valid" << endl;
     return true;
 }
