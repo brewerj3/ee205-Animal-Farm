@@ -28,6 +28,13 @@ bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, 
     newCat.setGenderOfCat( isGender );
     newCat.setBreedOfCat( isBreed );
     newCat.validate();
+    if(currentNumberOfCats == 0 ) {
+        CatClass::catDatabaseHeadPointer->next;
+    }
+    if( (currentNumberOfCats > 0 ) && (currentNumberOfCats < MAX_CATS) ){
+
+    }
+    currentNumberOfCats++;
 
     return true;
 }

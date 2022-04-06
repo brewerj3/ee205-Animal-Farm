@@ -18,7 +18,7 @@ using namespace std;
 
 int currentNumberOfCats=0;
 
-CatClass* catDatabaseHeadPointer = nullptr;
+
 
 CatClass::CatClass()
 {
