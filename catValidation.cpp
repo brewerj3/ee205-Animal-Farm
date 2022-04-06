@@ -45,6 +45,7 @@ bool CatClass::validate() {
 }
 
 bool validateDatabase( CatClass** head ) {
+    cout << "Validating Database" << endl;
     CatClass *last = *head;
     while( last->next != nullptr ) {
         if(!last->validate()){
