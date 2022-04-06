@@ -19,11 +19,11 @@
 #include "config.h"
 #include "catValidation.h"
 
-bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
+bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
     validateDatabase();
 
     CatClass* newCat = new CatClass();
-    CatClass *last = *&catDatabaseHeadPointer;
+    CatClass *last = *head;
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );

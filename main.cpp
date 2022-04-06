@@ -23,7 +23,7 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-    addCat( "Loki",   MALE,           PERSIAN,    true,  8.5 );
+    addCat( "Loki", &catDatabaseHeadPointer,  MALE,           PERSIAN,    true,  8.5 );
     //addCat( "Milo",   MALE,           MANX,       true,  7.0,   BLACK,  RED,    102 );
     //addCat( "Bella",  FEMALE,         MAINE_COON, true,  18.2,  BLACK,  BLUE,   103 );
     //addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2,   BLACK,  GREEN,  104 );

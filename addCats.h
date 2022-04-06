@@ -12,6 +12,7 @@
 #pragma once
 
 extern bool addCat(char nameToAdd[],
+                   CatClass** head,
                    Gender isGender,
                    Breed isBreed,
                    bool isFixedNew,
