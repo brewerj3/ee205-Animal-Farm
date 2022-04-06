@@ -83,7 +83,7 @@ bool CatClass::print() {
 
     return true;
 }
-void printAllCats( CatClass *n ){
+void printAllCats( CatClass* n ){
     while( n != nullptr ) {
         n->print();
         n = n->next;
