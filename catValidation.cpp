@@ -44,7 +44,7 @@ bool CatClass::validate() {
     return true;
 }
 
-bool validateDatabase( CatClass* node ) {
+bool validateDatabase( CatClass *node ) {
     cout << "Validating Database" << endl;
     while( node != nullptr ) {
         cout << "In while loop" << endl;

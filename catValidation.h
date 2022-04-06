@@ -11,4 +11,4 @@
 
 #pragma once
 
-extern bool validateDatabase(CatClass* head) ;
+extern bool validateDatabase(CatClass *head) ;
