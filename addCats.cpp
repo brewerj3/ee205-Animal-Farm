@@ -23,7 +23,7 @@ bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, 
     validateDatabase();
 
     CatClass* newCat = new CatClass();
-    CatClass* last = *catDatabaseHeadPointer;
+    CatClass* last = catDatabaseHeadPointer;
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );
@@ -32,8 +32,9 @@ bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, 
     newCat->validate();
     newCat->next = nullptr;
     currentNumberOfCats++;
+
     if(catDatabaseHeadPointer == nullptr ) {
-        *catDatabaseHeadPointer = newCat;
+        catDatabaseHeadPointer = newCat;
         return true;
     }
     while( last->next != nullptr ){
