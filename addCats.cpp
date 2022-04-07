@@ -19,7 +19,6 @@ using namespace std;
 #include "catValidation.h"
 
 bool addCat( CatClass* newCat ) {
-    cout << "validated" << endl;
     if(newCat == nullptr){
         return false;
     }
