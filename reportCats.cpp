@@ -9,9 +9,7 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 #include "catDatabase.h"
@@ -67,23 +65,7 @@ char* breedName( const int breed ){
     return 0;
 }
 
-bool CatClass::print() {
-    validate();
-#ifdef DEBUG
-    cout << "Attempting to print a cat" << endl;
-#endif
-    cout << setw(80) << setfill( '=' ) << "" << endl ;
-    cout << setfill( ' ' ) ;
-    cout << left ;
-    cout << boolalpha ;
-    FORMAT_LINE( "Cat", "name" ) << getName() << endl ;
-    FORMAT_LINE( "Cat", "gender" ) << genderName( getGenderOfCat() ) << endl ;
-    FORMAT_LINE( "Cat", "breed" ) << breedName( getBreedOfCat() ) << endl ;
-    FORMAT_LINE( "Cat", "isFixed" ) << getIsFixed() << endl ;
-    FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
 
-    return true;
-}
 void printAllCats(){
 #ifdef DEBUG
     cout << "Attempting to print all cats" << endl;

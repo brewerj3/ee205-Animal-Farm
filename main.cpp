@@ -23,9 +23,9 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-    addCat( "Loki",   MALE,           PERSIAN,    true,  1.0 );
-    addCat( "Milo",   MALE,           MANX,       true,  1.1 );
-    addCat( "Bella",  FEMALE,         MAINE_COON, true,  1.2 );
+    addCat( new CatClass("Loki",   MALE,           PERSIAN,1.0) );
+    addCat( new CatClass("Milo",   MALE,           MANX,   1.1) );
+    //addCat( "Bella",  FEMALE,         MAINE_COON, true,  1.2 );
     //addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2,   BLACK,  GREEN,  104 );
     //addCat( "Trin",   FEMALE,         MANX,       true,  12.2,  BLACK,  PINK,   105 );
     //addCat( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  false, 19.0,  WHITE,  BLACK,  106 );

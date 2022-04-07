@@ -18,28 +18,21 @@ using namespace std;
 #include "config.h"
 #include "catValidation.h"
 
-bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase();
+bool addCat( CatClass* newCat ) {
     cout << "validated" << endl;
-    CatClass* newCat = new CatClass();
+    if(newCat == nullptr){
+        return false;
+    }
+    newCat->validate();
+    validateDatabase();
+
 #ifdef DEBUG
     cout << "added new CatClass()" << endl; //@TODO remove before final
-    cout << "adding data to newCat" << endl;
 #endif
-    newCat->setNameOfCat( nameToAdd );
-    newCat->setWeight( weightNew );
-    newCat->setIsFixed( isFixedNew );
-    newCat->setGenderOfCat( isGender );
-    newCat->setBreedOfCat( isBreed );
-    newCat->validate();
-    newCat->next = nullptr;
+
+    newCat->next = catDatabaseHeadPointer;
+    catDatabaseHeadPointer = newCat;
     currentNumberOfCats++;
 
-    CatClass* lastCat;
-
-    for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next){
-        lastCat = iterateOverList;
-    }
-    newCat->next = lastCat;
     return true;
 }

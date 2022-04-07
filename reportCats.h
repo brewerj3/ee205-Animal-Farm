@@ -15,6 +15,8 @@
 
 extern char* genderName( int gender );
 
+extern char* breedName( int gender );
+
 extern void printCat( int index );
 
 extern void printAllCats();

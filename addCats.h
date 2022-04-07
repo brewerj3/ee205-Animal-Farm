@@ -11,8 +11,4 @@
 
 #pragma once
 
-extern bool addCat(char nameToAdd[],
-                   Gender isGender,
-                   Breed isBreed,
-                   bool isFixedNew,
-                   Weight weightNew ) ;
+extern bool addCat( CatClass* newCat ) ;

@@ -11,10 +11,12 @@
 
 #include <iostream>
 #include <cstring>
+#include <iomanip>
 using namespace std;
 
 #include "catDatabase.h"
 #include "config.h"
+#include "reportCats.h"
 
 CatClass* catDatabaseHeadPointer = nullptr;
 int currentNumberOfCats = 0;
@@ -28,13 +30,13 @@ CatClass::CatClass()
     weight = UNKNOWN_WEIGHT;
 }
 
-CatClass::CatClass( char newName[], Gender newGender, Breed newBreed, Weight newWeight)
+CatClass::CatClass( char* newName, Gender newGender, Breed newBreed, Weight newWeight)
 {
-    setNameOfCat( nullptr );
-    genderOfCat = UNKNOWN_GENDER;
-    breedOfCat = UNKNOWN_BREED;
+    setNameOfCat( newName );
+    setGenderOfCat( newGender );
+    setBreedOfCat( newBreed );
     isFixed = false;
-    weight = UNKNOWN_WEIGHT;
+    setWeight( newWeight );
 }
 
 const char *CatClass::getName() const {
@@ -66,7 +68,7 @@ void CatClass::setBreedOfCat(Breed breedToSet) {
 }
 
 void CatClass::setIsFixed(bool isFixedToSet) {
-    isFixed = isFixedToSet;
+    isFixed = true;
 }
 
 void CatClass::setWeight(Weight weightToSet) {
@@ -75,6 +77,24 @@ void CatClass::setWeight(Weight weightToSet) {
 
 void CatClass::setNameOfCat( char newName[] ) {
     strcpy( name, newName);
+}
+
+bool CatClass::print() {
+    validate();
+#ifdef DEBUG
+    cout << "Attempting to print a cat" << endl;
+#endif
+    cout << setw(80) << setfill( '=' ) << "" << endl ;
+    cout << setfill( ' ' ) ;
+    cout << left ;
+    cout << boolalpha ;
+    FORMAT_LINE( "Cat", "name" ) << getName() << endl ;
+    FORMAT_LINE( "Cat", "gender" ) << genderName( getGenderOfCat() ) << endl ;
+    FORMAT_LINE( "Cat", "breed" ) << breedName( getBreedOfCat() ) << endl ;
+    FORMAT_LINE( "Cat", "isFixed" ) << getIsFixed() << endl ;
+    FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
+
+    return true;
 }
 
 bool CatClass::validateName(const char *newName) {
