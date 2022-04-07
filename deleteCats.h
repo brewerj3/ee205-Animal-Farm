@@ -12,3 +12,5 @@
 #pragma once
 
 extern void deleteAllCats();
+
+extern void deleteCat( CatClass* catToDelete );

@@ -79,3 +79,5 @@ public:
 
     void setBreedOfCat(Breed breedToSet);
 };
+
+extern CatClass* catDatabaseHeadPointer;

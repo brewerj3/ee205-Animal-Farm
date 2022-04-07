@@ -9,16 +9,26 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <iostream>
 #include <cstdio>
 #include <cstring>
+using namespace std;
 
 #include "catDatabase.h"
 #include "deleteCats.h"
 #include "config.h"
+#include "catValidation.h"
 
 void deleteAllCats(){
     printf("Deleting all cats. \n");
     currentNumberOfCats = 0;
-    memset(catsStruct, 0, sizeof(catsStruct));
+
 }
 
+void deleteCat(CatClass* catToDelete ){
+    if(catToDelete == nullptr){
+        return;
+    }
+    assert(validateDatabase(catToDelete));
+
+}

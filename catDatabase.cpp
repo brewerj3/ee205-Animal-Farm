@@ -16,7 +16,8 @@ using namespace std;
 #include "catDatabase.h"
 #include "config.h"
 
-int currentNumberOfCats=0;
+CatClass* catDatabaseHeadPointer = nullptr;
+int currentNumberOfCats = 0;
 
 CatClass::CatClass()
 {

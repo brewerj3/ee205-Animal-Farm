@@ -44,11 +44,11 @@ bool CatClass::validate() {
     return true;
 }
 
-bool validateDatabase( CatClass *node ) {
+bool validateDatabase() {
     cout << "Validating Database" << endl;
-    while( node != nullptr ) {
+    while( catDatabaseHeadPointer != nullptr ) {
         cout << "In while loop" << endl;
-        if(!node->validate()){
+        if(!catDatabaseHeadPointer->validate()){
             cout << "This Cat is invalid" << endl;
             return false;
         }
