@@ -12,6 +12,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+#include <cassert>
 using namespace std;
 
 #include "catDatabase.h"
@@ -29,6 +30,6 @@ void deleteCat(CatClass* catToDelete ){
     if(catToDelete == nullptr){
         return;
     }
-    assert(validateDatabase(catToDelete));
+    assert( validateDatabase() );
 
 }

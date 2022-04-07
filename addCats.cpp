@@ -19,7 +19,7 @@ using namespace std;
 #include "catValidation.h"
 
 bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
-    validateDatabase( *head );
+    validateDatabase();
     cout << "validated" << endl;
     CatClass* newCat = new CatClass();
     cout << "added new CatClass()" << endl; //@TODO remove before final
