@@ -100,14 +100,14 @@ bool CatClass::print() {
 }
 
 bool CatClass::validateName(const char *newName) {
-    if(strcmp(newName, nullptr) == 0){
-        return false;
+    if(newName == nullptr){
+        throw invalid_argument(PROGRAM_NAME " Name cannot be NULL");
     }
     if(strcmp(newName, "") == 0){
-        return false;
+        throw length_error(PROGRAM_NAME "Name must be longer than 0");
     }
-    if(sizeof(newName) >= MAX_NAME_LENGTH){
-        return false;
+    if(strlen(newName) >= MAX_NAME_LENGTH){
+        throw length_error(PROGRAM_NAME "Name must be shorter than MAX_NAME_LENGTH")
     }
     return true;
 }
