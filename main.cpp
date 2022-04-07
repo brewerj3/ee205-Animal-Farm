@@ -9,7 +9,7 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstdio>
+
 #include <iostream>
 using namespace std;
 
@@ -23,13 +23,13 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-    addCat( new CatClass("Loki",   MALE,           PERSIAN,1.0) );
-    addCat( new CatClass("Milo",   MALE,           MANX,   1.1) );
-    //addCat( "Bella",  FEMALE,         MAINE_COON, true,  1.2 );
-    //addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2,   BLACK,  GREEN,  104 );
-    //addCat( "Trin",   FEMALE,         MANX,       true,  12.2,  BLACK,  PINK,   105 );
-    //addCat( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  false, 19.0,  WHITE,  BLACK,  106 );
-    //addCat( "Tybalt", MALE,           SPHYNX,     true,  7.9,   WHITE,  WHITE,  107 );
+    addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0) );
+    addCat( new CatClass( "Milo",   MALE,           MANX,       1.1) );
+    addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
+    addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  9.2) );
+    addCat( new CatClass( "Trin",   FEMALE,         MANX,       12.2) );
+    addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  19.0 ));
+    addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9));
     printAllCats();
 
 

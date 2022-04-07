@@ -57,6 +57,8 @@ bool validateDatabase() {
             return false;
         }
     }
+#ifdef DEBUG
     cout << "Database is Valid" << endl;
+#endif
     return true;
 }
