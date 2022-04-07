@@ -75,7 +75,9 @@ void CatClass::setWeight(Weight weightToSet) {
     weight = weightToSet;
 }
 
-void CatClass::setNameOfCat( char newName[] ) {
+void CatClass::setNameOfCat( char* newName ) {
+    validateName( newName );
+    memset( name, 0, MAX_NAME_LENGTH);
     strcpy( name, newName);
 }
 
