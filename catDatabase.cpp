@@ -107,7 +107,7 @@ bool CatClass::validateName(const char *newName) {
         throw length_error(PROGRAM_NAME "Name must be longer than 0");
     }
     if(strlen(newName) >= MAX_NAME_LENGTH){
-        throw length_error(PROGRAM_NAME "Name must be shorter than MAX_NAME_LENGTH")
+        throw length_error(PROGRAM_NAME "Name must be shorter than MAX_NAME_LENGTH");
     }
     return true;
 }
