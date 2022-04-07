@@ -83,9 +83,9 @@ bool CatClass::print() {
 
     return true;
 }
-void printAllCats( CatClass* n ){
-    while( n != nullptr ) {
+void printAllCats(){
+
+    for( CatClass* n = catDatabaseHeadPointer; n != nullptr; n = n->next ) {
         n->print();
-        n = n->next;
     }
 }

@@ -23,14 +23,14 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-    addCat( "Loki",  &head, MALE,           PERSIAN,    true,  1.0 );
-    addCat( "Milo",  &head, MALE,           MANX,       true,  1.1 );
-    addCat( "Bella", &head, FEMALE,         MAINE_COON, true,  1.2 );
+    addCat( "Loki",   MALE,           PERSIAN,    true,  1.0 );
+    addCat( "Milo",   MALE,           MANX,       true,  1.1 );
+    addCat( "Bella",  FEMALE,         MAINE_COON, true,  1.2 );
     //addCat( "Kali",   FEMALE,         SHORTHAIR,  false, 9.2,   BLACK,  GREEN,  104 );
     //addCat( "Trin",   FEMALE,         MANX,       true,  12.2,  BLACK,  PINK,   105 );
     //addCat( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  false, 19.0,  WHITE,  BLACK,  106 );
     //addCat( "Tybalt", MALE,           SPHYNX,     true,  7.9,   WHITE,  WHITE,  107 );
-    printAllCats( head );
+    printAllCats();
 
 
     cout << "Done with " << PROGRAM_NAME << endl;

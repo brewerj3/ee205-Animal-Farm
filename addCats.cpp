@@ -18,12 +18,11 @@ using namespace std;
 #include "config.h"
 #include "catValidation.h"
 
-bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
+bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, Weight weightNew ) {
     validateDatabase();
     cout << "validated" << endl;
     CatClass* newCat = new CatClass();
     cout << "added new CatClass()" << endl; //@TODO remove before final
-    CatClass *last = *head;
     cout << "adding data to newCat" << endl;
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
@@ -34,13 +33,11 @@ bool addCat( char nameToAdd[], CatClass** head, Gender isGender, Breed isBreed, 
     newCat->next = nullptr;
     currentNumberOfCats++;
 
-    if(*head == nullptr ) {
-        *head = newCat;
-        return true;
+    CatClass* lastCat;
+
+    for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next){
+        lastCat = iterateOverList;
     }
-    while( last->next != nullptr ){
-        last = last->next;
-    }
-    last->next = newCat;
+    newCat->next = lastCat;
     return true;
 }
