@@ -22,8 +22,10 @@ bool addCat( char nameToAdd[], Gender isGender, Breed isBreed, bool isFixedNew, 
     validateDatabase();
     cout << "validated" << endl;
     CatClass* newCat = new CatClass();
+#ifdef DEBUG
     cout << "added new CatClass()" << endl; //@TODO remove before final
     cout << "adding data to newCat" << endl;
+#endif
     newCat->setNameOfCat( nameToAdd );
     newCat->setWeight( weightNew );
     newCat->setIsFixed( isFixedNew );

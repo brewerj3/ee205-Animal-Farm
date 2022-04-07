@@ -9,8 +9,7 @@
 /// @date   04_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-#include <cstdio>
-#include <cstdlib>
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -70,7 +69,9 @@ char* breedName( const int breed ){
 
 bool CatClass::print() {
     validate();
-
+#ifdef DEBUG
+    cout << "Attempting to print a cat" << endl;
+#endif
     cout << setw(80) << setfill( '=' ) << "" << endl ;
     cout << setfill( ' ' ) ;
     cout << left ;
@@ -84,8 +85,13 @@ bool CatClass::print() {
     return true;
 }
 void printAllCats(){
-
-    for( CatClass* n = catDatabaseHeadPointer; n != nullptr; n = n->next ) {
-        n->print();
+#ifdef DEBUG
+    cout << "Attempting to print all cats" << endl;
+#endif
+    for( CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next ) {
+#ifdef DEBUG
+        cout << " In for loop" << endl;
+#endif
+        iterateOverList->print();
     }
 }
