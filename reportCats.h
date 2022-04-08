@@ -11,14 +11,12 @@
 
 #pragma once
 
-//extern char* colorCollar( int color );
-
 extern char* genderName( int gender );
 
 extern char* breedName( int gender );
 
-extern void printCat( int index );
-
 extern void printAllCats();
 
 extern int findCats( char nameToFind[] );
+
+extern CatClass* findCatByName(const char* nameToFind );

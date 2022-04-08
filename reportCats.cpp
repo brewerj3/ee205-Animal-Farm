@@ -77,3 +77,7 @@ void printAllCats(){
         iterateOverList->print();
     }
 }
+
+CatClass* findCatByName( const char* nameToFind ) {
+    CatClass().validateName(nameToFind);
+}
