@@ -10,8 +10,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <cstdio>
-#include <cstring>
 #include <cassert>
 using namespace std;
 

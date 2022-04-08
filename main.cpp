@@ -17,13 +17,12 @@ using namespace std;
 #include "addCats.h"
 #include "deleteCats.h"
 #include "reportCats.h"
-#include "updateCats.h"
 #include "config.h"
 
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-#ifdef DEBUG
+#ifdef DEBUG //for debugging unused features
     addCat(new CatClass());
 #endif
 
