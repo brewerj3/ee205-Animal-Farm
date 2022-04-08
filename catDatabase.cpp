@@ -41,6 +41,11 @@ CatClass::CatClass( char* newName, Gender newGender, Breed newBreed, Weight newW
 
 void CatClass::zeroCat() {
     memset( name, 0, MAX_NAME_LENGTH);
+    genderOfCat = UNKNOWN_GENDER;
+    breedOfCat = UNKNOWN_BREED;
+    isFixed = false;
+    weight = UNKNOWN_WEIGHT;
+    next = nullptr;
 }
 
 const char *CatClass::getName() const {

@@ -22,7 +22,13 @@ using namespace std;
 
 void deleteAllCats(){
     printf("Deleting all cats. \n");
-    currentNumberOfCats = 0;
+    for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
+        deleteCat(iterateOverList);
+        currentNumberOfCats--;
+        if(currentNumberOfCats > 0){
+            cout << PROGRAM_NAME << ": Missed a cat somewhere" << endl;
+        }
+    }
 
 }
 
@@ -32,5 +38,6 @@ void deleteCat(CatClass* catToDelete ){
     }
     assert( validateDatabase() );
     // Zero out Data
-
+    catToDelete->zeroCat();
+    currentNumberOfCats--;
 }
