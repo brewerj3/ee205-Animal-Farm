@@ -41,6 +41,9 @@ public:
     CatClass();
     CatClass( char* newName, Gender newGender, Breed newBreed, Weight newWeight);
 
+    //Zero out data function
+    void zeroCat();
+
     //getters
     const char *getName() const;
 

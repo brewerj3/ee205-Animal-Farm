@@ -31,5 +31,6 @@ void deleteCat(CatClass* catToDelete ){
         return;
     }
     assert( validateDatabase() );
+    // Zero out Data
 
 }
