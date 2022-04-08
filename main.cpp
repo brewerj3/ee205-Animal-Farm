@@ -23,13 +23,13 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
-    addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0) );
-    addCat( new CatClass( "Milo",   MALE,           MANX,       1.1) );
+    addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0 ) );
+    addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
-    addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  9.2) );
-    addCat( new CatClass( "Trin",   FEMALE,         MANX,       12.2) );
-    addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  19.0 ));
-    addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9));
+    addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );
+    addCat( new CatClass( "Trin",   FEMALE,         MANX,       1.4 ) );
+    addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  1.5 ) );
+    addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9 ) );
     printAllCats();
 
     deleteAllCats();
