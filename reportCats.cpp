@@ -69,18 +69,23 @@ char* breedName( const int breed ){
 
 void printAllCats(){
 #ifdef DEBUG
-    cout << "Attempting to print all cats" << endl;
+    cout << PROGRAM_NAME << ": Attempting to print all cats" << endl;
 #endif
-    for( CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next ) {
+    CatClass* iterateOverList = catDatabaseHeadPointer;
+    while( iterateOverList != nullptr ) {
 #ifdef DEBUG
-        cout << " In for loop" << endl;
+        cout << PROGRAM_NAME << ": In while loop printing all cats. currentNumberOfCats: " << currentNumberOfCats << endl;
 #endif
         iterateOverList->print();
+        iterateOverList = iterateOverList->next;
     }
 }
 
 CatClass* findCatByName( const char* nameToFind ) {
-    if(CatClass().validateName(nameToFind))
+    if(!CatClass().validateName(nameToFind)) {
+        cout << PROGRAM_NAME << ": Invalid Cat name passed to findCatByName" << endl;
+        return nullptr;
+    }
 
     for (CatClass *iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
         if( strcmp( nameToFind, iterateOverList->getName() ) == 0 ) {

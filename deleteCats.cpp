@@ -21,23 +21,42 @@ using namespace std;
 #include "catValidation.h"
 
 void deleteAllCats(){
-    printf("Deleting all cats. \n");
+    cout << "Deleting all cats. Current Number of Cats: " << currentNumberOfCats << endl;
     for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
-        deleteCat(iterateOverList);
-        currentNumberOfCats--;
-        if(currentNumberOfCats > 0){
+
+        cout << PROGRAM_NAME << ": In for loop of deleteAllCats. currentNumberOfCats: " << currentNumberOfCats << endl;
+
+        if(currentNumberOfCats < 0){
             cout << PROGRAM_NAME << ": Missed a cat somewhere" << endl;
         }
     }
-
 }
 
 void deleteCat(CatClass* catToDelete ){
     if(catToDelete == nullptr){
+        cout << PROGRAM_NAME << ": Parameter passed to deleteCat called catToDelete is null" << endl;
         return;
     }
     assert( validateDatabase() );
     // Zero out Data
+    cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
+    if(catToDelete == catDatabaseHeadPointer) {
+        catDatabaseHeadPointer = catDatabaseHeadPointer->next;
+        catToDelete->zeroCat();
+        delete catToDelete;
+        currentNumberOfCats--;
+        return;
+    }
+
+    for( CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next ){
+        // Find pointer to cats next to catToDelete in linked list
+        if( iterateOverList->next == catToDelete ) {
+            iterateOverList->next = catToDelete->next; //change next pointer to fix the gap in linked list
+            delete catToDelete;
+            currentNumberOfCats--;
+            return;
+        }
+    }
     catToDelete->zeroCat();
     currentNumberOfCats--;
 }

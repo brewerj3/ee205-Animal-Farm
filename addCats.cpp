@@ -26,7 +26,7 @@ bool addCat( CatClass* newCat ) {
     validateDatabase();
 
 #ifdef DEBUG
-    cout << "added new CatClass()" << endl; //@TODO remove before final
+    cout << "added new CatClass()" << endl;
 #endif
 
     newCat->next = catDatabaseHeadPointer;
