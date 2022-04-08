@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 #include "catDatabase.h"
@@ -80,4 +81,12 @@ void printAllCats(){
 
 CatClass* findCatByName( const char* nameToFind ) {
     CatClass().validateName(nameToFind);
+    for (CatClass *iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
+        if( strcmp( nameToFind, iterateOverList->getName() ) == 0 ) {
+            return iterateOverList;
+        }
+    }
+    return nullptr;
 }
+
+
