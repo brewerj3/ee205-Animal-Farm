@@ -23,6 +23,10 @@ using namespace std;
 int main(){
     cout << "Starting " << PROGRAM_NAME << endl;
 
+#ifdef DEBUG
+    addCat(new CatClass());
+#endif
+
     addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0 ) );
     addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );

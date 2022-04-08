@@ -45,20 +45,26 @@ bool CatClass::validate() {
 }
 
 bool validateDatabase() {
+
 #ifdef DEBUG
     cout << "Validating Database" << endl;
 #endif
+
     for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
+
 #ifdef DEBUG
         cout << "In while loop" << endl;
 #endif
+
         if(!iterateOverList->validate()){
             cout << "This Cat is invalid" << endl;
             return false;
         }
     }
+
 #ifdef DEBUG
     cout << "Database is Valid" << endl;
 #endif
+
     return true;
 }

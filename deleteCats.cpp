@@ -22,14 +22,16 @@ using namespace std;
 
 void deleteAllCats(){
     cout << "Deleting all cats. Current Number of Cats: " << currentNumberOfCats << endl;
-    for(CatClass* iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
-
-        cout << PROGRAM_NAME << ": In for loop of deleteAllCats. currentNumberOfCats: " << currentNumberOfCats << endl;
-
+    while( catDatabaseHeadPointer != nullptr ) {
+#ifdef DEBUG
+        cout << PROGRAM_NAME << ": In while loop of deleteAllCats. currentNumberOfCats: " << currentNumberOfCats << endl;
+#endif
+        deleteCat(catDatabaseHeadPointer);
         if(currentNumberOfCats < 0){
             cout << PROGRAM_NAME << ": Missed a cat somewhere" << endl;
         }
     }
+    cout << PROGRAM_NAME << ": All Cats Deleted" << endl;
 }
 
 void deleteCat(CatClass* catToDelete ){
@@ -39,9 +41,15 @@ void deleteCat(CatClass* catToDelete ){
     }
     assert( validateDatabase() );
     // Zero out Data
-    cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
+
     if(catToDelete == catDatabaseHeadPointer) {
+#ifdef DEBUG
+        cout << PROGRAM_NAME << ": Special case this is the first Cat " << endl;
+#endif
         catDatabaseHeadPointer = catDatabaseHeadPointer->next;
+#ifdef DEBUG
+        cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
+#endif
         catToDelete->zeroCat();
         delete catToDelete;
         currentNumberOfCats--;
@@ -52,11 +60,13 @@ void deleteCat(CatClass* catToDelete ){
         // Find pointer to cats next to catToDelete in linked list
         if( iterateOverList->next == catToDelete ) {
             iterateOverList->next = catToDelete->next; //change next pointer to fix the gap in linked list
+#ifdef DEBUG
+            cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
+#endif
+            catToDelete->zeroCat();
             delete catToDelete;
             currentNumberOfCats--;
             return;
         }
     }
-    catToDelete->zeroCat();
-    currentNumberOfCats--;
 }
