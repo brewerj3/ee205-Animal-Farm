@@ -32,6 +32,9 @@ int main(){
     addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9));
     printAllCats();
 
+    deleteAllCats();
+
+    printAllCats();
 
     cout << "Done with " << PROGRAM_NAME << endl;
 }
