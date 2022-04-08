@@ -16,7 +16,7 @@ using namespace std;
 #include "catDatabase.h"
 #include "reportCats.h"
 #include "config.h"
-#include "catValidation.h"
+
 
 //char* colorCollar( const int color ){
 //    switch(color){
@@ -80,7 +80,8 @@ void printAllCats(){
 }
 
 CatClass* findCatByName( const char* nameToFind ) {
-    CatClass().validateName(nameToFind);
+    if(CatClass().validateName(nameToFind))
+
     for (CatClass *iterateOverList = catDatabaseHeadPointer; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
         if( strcmp( nameToFind, iterateOverList->getName() ) == 0 ) {
             return iterateOverList;
