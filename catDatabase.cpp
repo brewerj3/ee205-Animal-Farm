@@ -77,6 +77,10 @@ void CatClass::setBreedOfCat(Breed breedToSet) {
 }
 
 void CatClass::setIsFixed(bool isFixedToSet) {
+    if( !isFixedToSet ) {
+        cout << PROGRAM_NAME << ": Cats can not be unfixed! " << endl;
+        return;
+    }
     isFixed = true;
 }
 

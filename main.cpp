@@ -11,6 +11,8 @@
 
 
 #include <iostream>
+#include <cassert>
+#include <cstring>
 using namespace std;
 
 #include "catDatabase.h"
@@ -25,54 +27,54 @@ int main(){
 #ifdef DEBUG //for debugging unused features
     {
       // Verify that a cat's default values are set
-      Cat testCat = Cat();
+      CatClass testCat = CatClass();
       assert(testCat.getName() != nullptr );
       assert(strcmp(testCat.getName(), "") == 0);
-      assert(testCat.getGender() == UNKNOWN_GENDER);
-      assert(testCat.getBreed() == UNKNOWN_BREED);
-      assert(testCat.isFixed() == false);
+      assert(testCat.getGenderOfCat() == UNKNOWN_GENDER);
+      assert(testCat.getBreedOfCat() == UNKNOWN_BREED);
+      assert(testCat.getIsFixed() == false);
       assert(testCat.getWeight() == UNKNOWN_WEIGHT);
-      assert(!testCat.isFixed());
+      assert(!testCat.getIsFixed());
       assert(!testCat.validate());  // The default cat is invalid
 
       // Test for NULL name
       try {
-         testCat.setName(nullptr);
+         testCat.setNameOfCat(nullptr);
          assert(false); // We should never get here
       } catch (exception const &e) {}
 
       // Test for empty name
       try {
-         testCat.setName("");
+         testCat.setNameOfCat("");
          assert(false); // We should never get here
       } catch (exception const &e) {}
 
       // Test valid names
-      testCat.setName("A");       // A 1 character name is valid
-      testCat.setName(MAX_NAME1); // A MAX_NAME1 name is valid
+      testCat.setNameOfCat("A");       // A 1 character name is valid
+      testCat.setNameOfCat(MAX_NAME1); // A MAX_NAME1 name is valid
 
       // Test for name too large
       try {
-         testCat.setName(ILLEGAL_NAME);
+         testCat.setNameOfCat(ILLEGAL_NAME);
          assert(false); // We should never get here
       } catch (exception const &e) {}
 
-      testCat.setGender(FEMALE);
+      testCat.setGenderOfCat(FEMALE);
 
       try {
-         testCat.setGender(MALE);
+         testCat.setGenderOfCat(MALE);
          assert(false); // We should never get here
       } catch (exception const &e) {}
 
-      testCat.setBreed(MAINE_COON);
+      testCat.setBreedOfCat(MAINE_COON);
 
       try {
-         testCat.setBreed(MANX);
+         testCat.setBreedOfCat(MANX);
          assert(false); // We should never get here
       } catch (exception const &e) {}
 
-      testCat.fixCat();
-      assert(testCat.isFixed());
+      testCat.setIsFixed();
+      assert(testCat.getIsFixed());
 
       // Test for Weight <= 0
       try {
