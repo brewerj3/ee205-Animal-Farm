@@ -19,11 +19,18 @@ using namespace std;
 #include "catValidation.h"
 
 void deleteAllCats(){
-    cout << "Deleting all cats. Current Number of Cats: " << currentNumberOfCats << endl;
+    cout << "Deleting all cats. " << endl;
+
+#ifdef DEBUG
+    cout << "Current Number of Cats: " << currentNumberOfCats << endl;
+#endif
+
     while( catDatabaseHeadPointer != nullptr ) {
+
 #ifdef DEBUG
         cout << PROGRAM_NAME << ": In while loop of deleteAllCats. currentNumberOfCats: " << currentNumberOfCats << endl;
 #endif
+
         deleteCat(catDatabaseHeadPointer);
         if(currentNumberOfCats < 0){
             cout << PROGRAM_NAME << ": Missed a cat somewhere" << endl;
@@ -41,14 +48,18 @@ void deleteCat(CatClass* catToDelete ){
     // Zero out Data
 
     if(catToDelete == catDatabaseHeadPointer) {
+
 #ifdef DEBUG
         cout << PROGRAM_NAME << ": Special case this is the first Cat " << endl;
 #endif
+
         catDatabaseHeadPointer = catDatabaseHeadPointer->next;
+
 #ifdef DEBUG
         cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
 #endif
-        catToDelete->zeroCat();
+
+        catToDelete->zeroCat(); // zero out data
         delete catToDelete;
         currentNumberOfCats--;
         return;
@@ -58,9 +69,11 @@ void deleteCat(CatClass* catToDelete ){
         // Find pointer to cats next to catToDelete in linked list
         if( iterateOverList->next == catToDelete ) {
             iterateOverList->next = catToDelete->next; //change next pointer to fix the gap in linked list
+
 #ifdef DEBUG
             cout << PROGRAM_NAME << ": Deleting Cat Named: " << catToDelete->getName() << endl;
 #endif
+
             catToDelete->zeroCat();
             delete catToDelete;
             currentNumberOfCats--;
