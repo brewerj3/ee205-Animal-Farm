@@ -11,12 +11,13 @@
 
 #include <iostream>
 #include <cassert>
-using namespace std;
 
 #include "catDatabase.h"
 #include "deleteCats.h"
 #include "config.h"
 #include "catValidation.h"
+
+using namespace std;
 
 void deleteAllCats(){
     cout << "Deleting all cats. " << endl;

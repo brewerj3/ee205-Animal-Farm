@@ -11,12 +11,12 @@
 
 #include <iostream>
 #include <cstring>
-using namespace std;
 
 #include "catDatabase.h"
 #include "reportCats.h"
 #include "config.h"
 
+using namespace std;
 
 //char* colorCollar( const int color ){
 //    switch(color){

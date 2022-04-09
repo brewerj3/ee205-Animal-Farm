@@ -12,18 +12,19 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
-using namespace std;
 
 #include "catDatabase.h"
 #include "config.h"
 #include "reportCats.h"
+
+using namespace std;
 
 CatClass* catDatabaseHeadPointer = nullptr;
 int currentNumberOfCats = 0;
 
 CatClass::CatClass()
 {
-    name[0]=0;
+    memset( name, 0 , MAX_NAME_LENGTH);
     genderOfCat = UNKNOWN_GENDER;
     breedOfCat = UNKNOWN_BREED;
     isFixed = false;

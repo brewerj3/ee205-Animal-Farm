@@ -10,11 +10,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-using namespace std;
 
 #include "catDatabase.h"
 #include "config.h"
 
+using namespace std;
 
 bool CatClass::validate() {
     if( name == nullptr ) {

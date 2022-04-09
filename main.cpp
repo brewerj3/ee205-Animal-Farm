@@ -93,6 +93,9 @@ int main(){
       testCat.print() ;
 
       //assert(!isCatInDatabase(&testCat)) ; @TODO add isCatInDatabase when I know what it is supposed to do
+
+
+
    }
 #endif
 
@@ -104,6 +107,13 @@ int main(){
     addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  1.5 ) );
     addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9 ) );
     printAllCats();
+
+#ifdef DEBUG_DELETE //This is a test of deleting a single cat from the database
+    cout << PROGRAM_NAME << ": Testing deleting a cat from database" << endl;
+    CatClass* deleteTestCat = findCatByName("Tybalt");
+    deleteCat(deleteTestCat);
+    printAllCats();
+#endif
 
     deleteAllCats();
 

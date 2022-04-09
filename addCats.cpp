@@ -10,13 +10,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-using namespace std;
-
 
 #include "catDatabase.h"
 #include "addCats.h"
 #include "config.h"
 #include "catValidation.h"
+
+using namespace std;
 
 bool addCat( CatClass* newCat ) {
     if(newCat == nullptr){

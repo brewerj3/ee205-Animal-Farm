@@ -12,3 +12,5 @@
 #define PROGRAM_NAME "Animal Farm 2"
 
 #define DEBUG
+
+#define DEBUG_DELETE
