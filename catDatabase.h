@@ -58,7 +58,7 @@ public:
     //setters
     void setNameOfCat( char newName[] );
 
-    void setIsFixed(bool isFixedToSet);
+    void setIsFixed();
 
     void setWeight(Weight weightToSet);
 
