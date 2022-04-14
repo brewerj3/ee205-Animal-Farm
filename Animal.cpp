@@ -19,7 +19,7 @@ Animal::Animal(float newMaxWeight, const std::string &newClassification, const s
 
 }
 
-Animal::Animal(const Animal::Gender newGender, const float newWeight, const float newMaxWeight,
+Animal::Animal(const Gender newGender, const float newWeight, const float newMaxWeight,
                const std::string &newClassification, const std::string &newSpecies) {
 
 }
