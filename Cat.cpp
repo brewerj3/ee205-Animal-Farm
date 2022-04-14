@@ -13,7 +13,7 @@
 #include <cstring>
 #include <iomanip>
 
-#include "catDatabase.h"
+#include "Cat.h"
 #include "config.h"
 #include "reportCats.h"
 
@@ -24,14 +24,14 @@ int currentNumberOfCats = 0;
 
 CatClass::CatClass()
 {
-    memset( name, 0 , MAX_NAME_LENGTH);
+    name.clear();
     genderOfCat = UNKNOWN_GENDER;
     breedOfCat = UNKNOWN_BREED;
     isFixed = false;
     weight = UNKNOWN_WEIGHT;
 }
 
-CatClass::CatClass( char* newName, Gender newGender, Breed newBreed, Weight newWeight)
+CatClass::CatClass( std::string newName, Gender newGender, Breed newBreed, Weight newWeight)
 {
     setNameOfCat( newName );
     setGenderOfCat( newGender );
@@ -41,7 +41,7 @@ CatClass::CatClass( char* newName, Gender newGender, Breed newBreed, Weight newW
 }
 
 void CatClass::zeroCat() {
-    memset( name, 0, MAX_NAME_LENGTH);
+    name.clear();
     genderOfCat = UNKNOWN_GENDER;
     breedOfCat = UNKNOWN_BREED;
     isFixed = false;
@@ -49,7 +49,7 @@ void CatClass::zeroCat() {
     next = nullptr;
 }
 
-const char *CatClass::getName() const {
+std::string CatClass::getName() const {
     return name;
 }
 
@@ -85,10 +85,10 @@ void CatClass::setWeight(Weight weightToSet) {
     weight = weightToSet;
 }
 
-void CatClass::setNameOfCat( char* newName ) {
+void CatClass::setNameOfCat( std::string newName ) {
     validateName( newName );
-    memset( name, 0, MAX_NAME_LENGTH);
-    strcpy( name, newName);
+    name.clear();
+    name = newName;
 }
 
 bool CatClass::print() {
@@ -106,6 +106,31 @@ bool CatClass::print() {
     FORMAT_LINE( "Cat", "isFixed" ) << getIsFixed() << endl ;
     FORMAT_LINE( "Cat", "weight" ) << getWeight() << endl ;
 
+    return true;
+}
+
+bool CatClass::validate() {
+
+    if( name.empty() ) {
+        cout << "Invalid Cat name" << endl;
+        return false;
+    }
+    if( name.length() > MAX_NAME_LENGTH){
+        cout << "Invalid Cat name" << endl;
+        return false;
+    }
+    if( ( genderOfCat < 0 ) || ( genderOfCat > 2 ) ) {
+        cout << "Invalid Cat Gender" << endl;
+        return false;
+    }
+    if( ( breedOfCat < 0 ) || ( breedOfCat > 5 ) ) {
+        cout << "Invalid Cat Breed" << endl;
+        return false;
+    }
+    if( weight <= 0 ) {
+        cout << "Invalid Cat weight" << endl;
+        return false;
+    }
     return true;
 }
 

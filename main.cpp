@@ -14,7 +14,7 @@
 #include <cassert>
 #include <cstring>
 
-#include "catDatabase.h"
+#include "Cat.h"
 #include "addCats.h"
 #include "deleteCats.h"
 #include "reportCats.h"

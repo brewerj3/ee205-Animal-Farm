@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-#include "catDatabase.h"
+#include "Cat.h"
 #include "addCats.h"
 #include "config.h"
 #include "catValidation.h"

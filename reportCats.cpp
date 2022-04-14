@@ -12,7 +12,7 @@
 #include <iostream>
 #include <cstring>
 
-#include "catDatabase.h"
+#include "Cat.h"
 #include "reportCats.h"
 #include "config.h"
 

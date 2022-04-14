@@ -28,7 +28,7 @@ extern int currentNumberOfCats;
 
 class CatClass {
 private:
-    char name[MAX_NAME_LENGTH];
+    std::string name;
     Gender genderOfCat;
     Breed breedOfCat;
     bool isFixed;
@@ -39,13 +39,13 @@ public:
     CatClass *next = nullptr;
 
     CatClass();
-    CatClass( char* newName, Gender newGender, Breed newBreed, Weight newWeight);
+    CatClass( std::string newName, Gender newGender, Breed newBreed, Weight newWeight);
 
     //Zero out data function
     void zeroCat();
 
     //getters
-    const char *getName() const;
+    std::string getName() const;
 
     Gender getGenderOfCat() const;
 
@@ -56,7 +56,7 @@ public:
     Weight getWeight() const;
 
     //setters
-    void setNameOfCat( char newName[] );
+    void setNameOfCat( std::string newName );
 
     void setIsFixed();
 

@@ -12,7 +12,7 @@
 #include <iostream>
 #include <cassert>
 
-#include "catDatabase.h"
+#include "Cat.h"
 #include "deleteCats.h"
 #include "config.h"
 #include "catValidation.h"
