@@ -34,13 +34,13 @@ public:
     static float convertWeight( float fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit ) noexcept;
 
     //getters
-    float getWeight() const noexcept;
+    static float getWeight() const noexcept;
     float getWeight( UnitOfWeight weightUnit ) const noexcept;
     float getMaxWeight() const noexcept;
     UnitOfWeight getWeightUnit() const noexcept;
 
     //setters
-    void setWeight( float newWeight );
+    static void setWeight(float newWeight );
     void setWeight( float newWeight, UnitOfWeight newUnit );
 
     //bools

@@ -35,7 +35,7 @@ public:
     float getWeight() const noexcept;
 
     //Setters
-    void setWeight( const float newWeight );
+    void setWeight( float newWeight );
 
     //Speak
     virtual std::string speak() const noexcept;
