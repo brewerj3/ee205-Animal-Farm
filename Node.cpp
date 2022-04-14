@@ -11,3 +11,10 @@
 
 #include "Node.h"
 
+void Node::dump() const {
+
+}
+
+bool Node::validate() const noexcept {
+    return false;
+}
