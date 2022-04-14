@@ -8,7 +8,14 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
-#ifndef ANIMAL_FARM_3_ANIMAL_H
-#define ANIMAL_FARM_3_ANIMAL_H
 
-#endif //ANIMAL_FARM_3_ANIMAL_H
+#include <iostream>
+
+class Animal{
+private:
+    static const std::string KINGDOM_NAME;
+    std::string species;
+    std::string classification;
+    enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
+
+};

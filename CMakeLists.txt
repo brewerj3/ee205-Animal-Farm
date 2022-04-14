@@ -13,4 +13,4 @@ add_executable(animalFarm
                catValidation.cpp catValidation.h
                reportCats.cpp reportCats.h
                deleteCats.cpp deleteCats.h
-               Node.cpp Node.h Animal.cpp Animal.h)
+               Node.cpp Node.h Animal.cpp Animal.h Weight.cpp Weight.h)

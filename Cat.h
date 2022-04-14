@@ -16,7 +16,7 @@
 #define UNKNOWN_WEIGHT ( -1 )
 #define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
 
-enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
+
 
 enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 
