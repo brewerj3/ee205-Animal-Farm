@@ -9,4 +9,13 @@
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#include <iostream>
+
 #include "Animal.h"
+#include "Weight.h"
+
+Animal::Animal(float newMaxWeight, const std::string &newClassification, const std::string &newSpecies) {
+    Animal.Weight.getWeight();
+
+}
+

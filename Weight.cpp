@@ -106,7 +106,7 @@ bool Weight::hasMaxWeight() const noexcept {
     return bWeightHasMax;
 }
 
-bool Weight::isWeightValid(float weightToValidate) {
+bool Weight::isWeightValid(float weightToValidate) const {
     if( hasMaxWeight() && (weightToValidate >= maximumWeight ) ) {
         return false;
     }

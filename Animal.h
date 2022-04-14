@@ -11,11 +11,18 @@
 
 #include <iostream>
 
+#include "Weight.h"
+
 class Animal{
 private:
     static const std::string KINGDOM_NAME;
     std::string species;
     std::string classification;
     enum Gender{UNKNOWN_GENDER, MALE, FEMALE};
+    Weight weight;
+
+public:
+    //Constructors
+    Animal( float newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
 
 };

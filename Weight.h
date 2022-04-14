@@ -46,7 +46,7 @@ public:
     //bools
     bool isWeightKnown() const noexcept;
     bool hasMaxWeight() const noexcept;
-    bool isWeightValid( float weightToValidate );
+    bool isWeightValid( float weightToValidate ) const;
     bool validate() const noexcept;
 
     //Print out from Class
