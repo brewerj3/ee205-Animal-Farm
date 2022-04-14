@@ -1,12 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///         University of Hawaii, College of Engineering
-/// @brief  ee205_lab_08d_animal_farm_2 - EE 205 - Spr 2022
+/// @brief  ee205_lab_13a_animal_farm_3 - EE 205 - Spr 2022
 ///
 /// @file reportCats.cpp
-/// @version 1.0
+/// @version 3.0
 ///
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
-/// @date   04_Apr_2022
+/// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>

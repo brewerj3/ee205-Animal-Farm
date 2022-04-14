@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-set(projname "ee205-lab_10d_animal_farm_2")
+set(projname "animal_farm_3")
 project(${projname})
 
 set(CMAKE_CXX_STANDARD 14)
