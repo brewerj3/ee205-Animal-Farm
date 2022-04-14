@@ -13,9 +13,13 @@
 
 #include "Animal.h"
 #include "Weight.h"
+#include "Gender.h"
 
 Animal::Animal(float newMaxWeight, const std::string &newClassification, const std::string &newSpecies) {
-    Animal.Weight.getWeight();
 
 }
 
+Animal::Animal(const Animal::Gender newGender, const float newWeight, const float newMaxWeight,
+               const std::string &newClassification, const std::string &newSpecies) {
+
+}

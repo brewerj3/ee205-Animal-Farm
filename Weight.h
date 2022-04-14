@@ -75,15 +75,3 @@ private:
 };
 
 std::ostream& operator<<( std::ostream& lhs_stream, Weight::UnitOfWeight rhs_UnitOfWeight );
-© 2022 GitHub, Inc.
-Terms
-        Privacy
-Security
-        Status
-Docs
-        Contact GitHub
-        Pricing
-API
-        Training
-Blog
-        About
