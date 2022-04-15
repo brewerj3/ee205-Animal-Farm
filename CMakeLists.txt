@@ -15,4 +15,4 @@ add_executable( animalFarm
                 deleteCats.cpp deleteCats.h
                 Node.cpp Node.h
                 Animal.cpp Animal.h
-                Weight.cpp Weight.h Gender.cpp Gender.h)
+                Weight.cpp Weight.h Gender.cpp Gender.h Mammal.cpp Mammal.h Color.cpp Color.h)

@@ -47,5 +47,5 @@ public:
     bool validate() const noexcept override;
     static bool validateClassification(const std::string &checkClassification ) noexcept;
     static bool validateSpecies( const std::string &checkSpecies ) noexcept;
-    void setGender(const Gender newGender );
+    void setGender(Gender newGender );
 };
