@@ -15,11 +15,7 @@
 
 #include "Mammal.h"
 
-
 #define MAX_NAME_LENGTH ( 50 )
-#define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
-
-
 
 class Cat: public Mammal {
 protected:

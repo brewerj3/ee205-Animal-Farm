@@ -14,4 +14,4 @@ add_executable( animalFarm
                 Weight.cpp Weight.h
                 Gender.cpp Gender.h
                 Mammal.cpp Mammal.h
-                Color.cpp Color.h)
+                Color.cpp Color.h List.cpp List.h)
