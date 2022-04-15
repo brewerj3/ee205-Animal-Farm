@@ -96,6 +96,7 @@ int main(){
 #endif
 
     Cat  firstCat( "Loki" );
+    firstCat.dump();
     //addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     //addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
     //addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );
@@ -104,12 +105,6 @@ int main(){
     //addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9 ) );
     //printAllCats();
 
-#ifdef DEBUG_DELETE //This is a test of deleting a single cat from the database
-    cout << PROGRAM_NAME << ": Testing deleting a cat from database" << endl;
-    CatClass* deleteTestCat = findCatByName("Tybalt");
-    deleteCat(deleteTestCat);
-    printAllCats();
-#endif
 
     //deleteAllCats();
 

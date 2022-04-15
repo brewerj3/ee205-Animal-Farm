@@ -228,5 +228,4 @@ std::ostream& operator<<( std::ostream& lhs_stream, const Weight::UnitOfWeight r
         break;
         default:                throw std::out_of_range( "This unit can't be mapped to a string" );
     }
-
 }
