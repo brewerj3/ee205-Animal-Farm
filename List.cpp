@@ -35,7 +35,7 @@ unsigned int List::size() const noexcept {
     return currentCount;
 }
 
-bool List::isSorted() const noexcept {
+bool List::isListSorted() const noexcept {
     return false; //the list will not be sorted.
 }
 

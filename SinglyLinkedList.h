@@ -15,5 +15,15 @@
 #include "List.h"
 
 class SinglyLinkedList : public List {
+public:
+    //Constructor
+    SinglyLinkedList();
+
+    //List handling
+    void push_front( Node* newNode );
+    Node* pop_front() noexcept overide;
+    void insert_after( Node* currentNode, Node* newNode );
+    void dump() const noexcept override;
+    bool validate() const noexcept override;
 
 };

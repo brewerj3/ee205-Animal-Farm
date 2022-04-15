@@ -13,6 +13,7 @@
 
 #include "Node.h"
 
+
 class List{
 protected:
     Node* head = nullptr;
@@ -21,8 +22,11 @@ protected:
 public:
     bool empty() const noexcept;
     bool isInList( Node* nodeToCheck ) const;
-    bool isSorted() const noexcept;
+    bool isListSorted() const noexcept;
     virtual bool validate() const noexcept = 0;
+
+    // gets next node in list
+    static Node* get_next(const Node* currentNode );
 
     // gets the size of list
     unsigned int size() const noexcept;
@@ -35,6 +39,10 @@ public:
 
     //Dump list
     virtual void dump() const noexcept = 0;
+
+    // Remove first Node in list
+    virtual Node* pop_front() noexcept = 0;
+
 
 
 };
