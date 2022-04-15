@@ -15,18 +15,14 @@
 #include <cstring>
 
 #include "Cat.h"
-#include "addCats.h"
-#include "deleteCats.h"
-#include "reportCats.h"
-#include "config.h"
 
-using namespace std;
+#include "config.h"
 
 #define MAX_NAME1    "1234567890123456789012345678901234567890123456789"
 #define ILLEGAL_NAME "12345678901234567890123456789012345678901234567890"
 
 int main(){
-    cout << "Starting " << PROGRAM_NAME << endl;
+    std::cout << "Starting " << PROGRAM_NAME << std::endl;
 
 #ifdef DEBUG //for debugging unused features
     {
@@ -99,14 +95,14 @@ int main(){
    }
 #endif
 
-    addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0 ) );
-    addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
-    addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
-    addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );
-    addCat( new CatClass( "Trin",   FEMALE,         MANX,       1.4 ) );
-    addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  1.5 ) );
-    addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9 ) );
-    printAllCats();
+    //addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0 ) );
+    //addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
+    //addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
+    //addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );
+    //addCat( new CatClass( "Trin",   FEMALE,         MANX,       1.4 ) );
+    //addCat( new CatClass( "Chili",  UNKNOWN_GENDER, SHORTHAIR,  1.5 ) );
+    //addCat( new CatClass( "Tybalt", MALE,           SPHYNX,     7.9 ) );
+    //printAllCats();
 
 #ifdef DEBUG_DELETE //This is a test of deleting a single cat from the database
     cout << PROGRAM_NAME << ": Testing deleting a cat from database" << endl;
@@ -115,9 +111,9 @@ int main(){
     printAllCats();
 #endif
 
-    deleteAllCats();
+    //deleteAllCats();
 
-    printAllCats();
+    //printAllCats();
 
-    cout << "Done with " << PROGRAM_NAME << endl;
+    std::cout << "Done with " << PROGRAM_NAME << std::endl;
 }

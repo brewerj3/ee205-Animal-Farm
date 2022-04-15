@@ -117,16 +117,25 @@ bool Weight::hasMaxWeight() const noexcept {
 }
 
 bool Weight::isWeightValid(typeWeight weightToValidate) const noexcept {
-    if( hasMaxWeight() && (weightToValidate >= maximumWeight ) ) {
+    if( hasMaxWeight() && (weightToValidate > maximumWeight ) ) {
+        std::cout << PROGRAM_NAME << ": Weight is more the maximum weight" << std::endl;
         return false;
     }
+    if( weightToValidate == -1 ) {
+        std::cout << PROGRAM_NAME << ": Weight is UNKNOWN WEIGHT" << std::endl;
+        return true;
+    }
     if( weightToValidate <= 0 ) {
+        std::cout << PROGRAM_NAME ": Weight cannot be less than or equal to 0" << std::endl;
         return false;
     }
     return true;
 }
 
 bool Weight::validate() const noexcept {
+    if( !isWeightValid( Weight::weight) ) {
+        return false;
+    }
     return true; //@TODO Make this actually useful
 }
 

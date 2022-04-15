@@ -20,9 +20,42 @@
 int currentNumberOfCats = 0;
 
 const std::string Cat::SPECIES_NAME = "Felis Catus";
-const float Cat::MAX_WEIGHT = 40;
+const Weight::typeWeight Cat::MAX_WEIGHT = 40;
 
-bool Cat::validateName(const std::string& newName) {
+
+
+std::string Cat::getName() const {
+    return name;
+}
+
+void Cat::setNameOfCat( const std::string& newName ) {
+    assert( validateName( newName ) );
+    name = newName;
+}
+
+void Cat::fixCat() noexcept {
+    isFixed = true; // Cant unfix a Cat
+}
+
+void Cat::dump() {
+
+}
+
+std::string Cat::speak() const noexcept {
+    return "Meow";
+}
+
+bool Cat::validate() {
+    if( !validateName( Cat::name )) {
+        return false;
+    }
+    if( !Animal::validate() ) {
+        return false;
+    }
+    return true;
+}
+
+bool Cat::validateName( const std::string& newName ) {
     if( newName.length() > MAX_NAME_LENGTH ) {
         std::cout << PROGRAM_NAME << ": Name is to long" << std::endl;
         return false;
@@ -36,8 +69,4 @@ bool Cat::validateName(const std::string& newName) {
         return false;
     }
     return true;
-}
-
-Cat::Cat() {
-
 }

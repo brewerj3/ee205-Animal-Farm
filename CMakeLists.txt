@@ -9,10 +9,9 @@ add_executable( animalFarm
                 main.cpp
                 config.h
                 Cat.cpp Cat.h
-                addCats.cpp addCats.h
-                catValidation.cpp catValidation.h
-                reportCats.cpp reportCats.h
-                deleteCats.cpp deleteCats.h
                 Node.cpp Node.h
                 Animal.cpp Animal.h
-                Weight.cpp Weight.h Gender.cpp Gender.h Mammal.cpp Mammal.h Color.cpp Color.h)
+                Weight.cpp Weight.h
+                Gender.cpp Gender.h
+                Mammal.cpp Mammal.h
+                Color.cpp Color.h)

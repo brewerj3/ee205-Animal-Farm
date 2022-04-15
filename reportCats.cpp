@@ -16,7 +16,7 @@
 #include "reportCats.h"
 #include "config.h"
 
-using namespace std;
+
 
 //char* colorCollar( const int color ){
 //    switch(color){
