@@ -18,11 +18,21 @@ bool List::empty() const noexcept{
 }
 
 bool List::isInList(Node *nodeToCheck) const {
+    Node* iterateOverList = head;
+    while( iterateOverList != nullptr ) {
+        if( iterateOverList == nodeToCheck ) {
+            return true;
+        }
+        iterateOverList = iterateOverList->next;
+    }
+    if( iterateOverList == nodeToCheck ) {
+        return true;
+    }
     return false;
 }
 
 unsigned int List::size() const noexcept {
-    return 0;
+    return currentCount;
 }
 
 bool List::isSorted() const noexcept {
