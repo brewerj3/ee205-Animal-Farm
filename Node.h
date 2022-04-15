@@ -16,6 +16,8 @@
 #include "config.h"
 
 class Node{
+    friend class List;
+
 protected:
     Node* next = nullptr;
 

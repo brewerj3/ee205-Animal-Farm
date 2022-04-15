@@ -26,5 +26,18 @@ unsigned int List::size() const noexcept {
 }
 
 bool List::isSorted() const noexcept {
-    return false; //the list will not be sorted yet
+    return false; //the list will not be sorted.
+}
+
+Node *List::getFirstInList() const noexcept {
+    return head;
+}
+
+void List::deleteAllNodes() noexcept {
+    while( head != nullptr ) {
+        Node* nodeToDelete = head;
+        head = head->next;
+        delete nodeToDelete;
+        currentCount--;
+    }
 }

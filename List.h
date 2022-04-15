@@ -22,7 +22,7 @@ public:
     bool empty() const noexcept;
     bool isInList( Node* nodeToCheck ) const;
     bool isSorted() const noexcept;
-    virtual bool validate() const noexcept;
+    virtual bool validate() const noexcept = 0;
 
     // gets the size of list
     unsigned int size() const noexcept;
@@ -32,6 +32,9 @@ public:
 
     //Delete all nodes
     void deleteAllNodes() noexcept;
+
+    //Dump list
+    virtual void dump() const noexcept = 0;
 
 
 };
