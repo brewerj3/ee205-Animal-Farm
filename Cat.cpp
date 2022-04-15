@@ -19,7 +19,10 @@
 
 int currentNumberOfCats = 0;
 
-bool Cat::validateName(std::string newName) {
+const std::string Cat::SPECIES_NAME = "Felis Catus";
+const float Cat::MAX_WEIGHT = 40;
+
+bool Cat::validateName(const std::string& newName) {
     if( newName.length() > MAX_NAME_LENGTH ) {
         std::cout << PROGRAM_NAME << ": Name is to long" << std::endl;
         return false;

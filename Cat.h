@@ -33,7 +33,7 @@ public:
     static const float MAX_WEIGHT;
 
     //Check if name is valid
-    static bool validateName( std::string newName);
+    static bool validateName( const std::string& newName);
 
 
     //Constructors
