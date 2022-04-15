@@ -9,6 +9,8 @@
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 #include <iostream>
 #define FORMAT( className, member ) std::cout << std::setw(8) << (className) << std::setw(20) << (member) << std::setw(52)
 

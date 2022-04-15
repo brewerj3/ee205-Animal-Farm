@@ -9,6 +9,8 @@
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 #include <iostream>
 
 enum class Color{ UNKNOWN_COLOR, BLACK, BROWN, WHITE, RED, BLUE, GINGER, CREAM, CINNAMON, CALICO };

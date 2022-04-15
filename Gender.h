@@ -8,10 +8,8 @@
 /// @author Joshua Brewer <brewerj3@hawaii.edu>
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
-//#ifndef ANIMAL_FARM_3_GENDER_H
-//#define ANIMAL_FARM_3_GENDER_H
 
-//#endif //ANIMAL_FARM_3_GENDER_H
+#pragma once
 
 #include <iostream>
 
