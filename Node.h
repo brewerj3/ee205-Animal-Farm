@@ -11,10 +11,12 @@
 
 //class to make the linked list
 class Node{
+protected:
     Node* next;
+    static bool compareByAddress(const Node *node1, const Node *node2);
+
 public:
     virtual void dump() const;
     virtual bool validate() const noexcept;
-
-
+    virtual bool operator>(const Node &rightSide);
 };

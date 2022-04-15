@@ -13,8 +13,9 @@
 
 #include "Weight.h"
 #include "Gender.h"
+#include "Node.h"
 
-class Animal{
+class Animal: public Node{
 private:
     static const std::string KINGDOM_NAME;
     std::string species;
@@ -38,7 +39,7 @@ public:
     void setWeight( float newWeight );
 
     //Speak
-    virtual std::string speak() const noexcept;
+    virtual std::string speak() const noexcept; //@TODO add definition
 
     //Print out
     void dump() const noexcept override;

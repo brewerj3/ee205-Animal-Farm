@@ -12,8 +12,13 @@
 #include <iostream>
 
 #include "Color.h"
+#include "Animal.h"
 
-class Mammal{
-private:
+class Mammal: public Animal{
+protected:
+    Color color;
+
+public:
     static const std::string MAMMAL_NAME;
+
 };
