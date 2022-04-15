@@ -27,5 +27,11 @@ public:
     // gets the size of list
     unsigned int size() const noexcept;
 
+    // Get the first node in the list
     Node* getFirstInList() const noexcept;
+
+    //Delete all nodes
+    void deleteAllNodes() noexcept;
+
+
 };
