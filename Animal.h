@@ -26,7 +26,7 @@ public:
     static const std::string KINGDOM_NAME;
 
     //Constructors
-    Animal( Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
+    Animal( Weight::typeWeight newMaxWeight, const std::string& newClassification, const std::string& newSpecies );
     Animal( Gender newGender, Weight::typeWeight newWeight, Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
 
     //Getters
@@ -34,10 +34,10 @@ public:
     std::string getClassification() const noexcept;
     std::string getSpecies() const noexcept;
     Gender getGender() const noexcept;
-    static Weight::typeWeight getWeight() noexcept;
+    Weight::typeWeight getWeight() noexcept;
 
     //Setters
-    static void setWeight( Weight::typeWeight newWeight );
+    void setWeight( Weight::typeWeight newWeight );
 
     //Speak
     virtual std::string speak() const noexcept; //@TODO add definition

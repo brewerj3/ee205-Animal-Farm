@@ -38,14 +38,15 @@ public:
     static float convertWeight( float fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit ) noexcept;
 
     //getters
-    static typeWeight getWeight() const noexcept;
+    typeWeight getWeight() const noexcept;
     typeWeight getWeight( UnitOfWeight weightUnit ) const noexcept;
     typeWeight getMaxWeight() const noexcept;
     UnitOfWeight getWeightUnit() const noexcept;
 
     //setters
-    static void setWeight(typeWeight newWeight );
+    void setWeight(typeWeight newWeight );
     void setWeight( typeWeight newWeight, UnitOfWeight newUnit );
+    void setMaxWeight( typeWeight newMaxWeight );
 
     //bools
     bool isWeightKnown() const noexcept;
@@ -73,8 +74,8 @@ public:
 
 private:
     UnitOfWeight unitOfWeight = POUND;
-    typeWeight weight = UNKNOWN_WEIGHT;
-    typeWeight maximumWeight;
+    typeWeight weight {};
+    typeWeight maximumWeight {};
     bool bWeightHasMax = false;
     bool bWeightIsKnown = false;
 };

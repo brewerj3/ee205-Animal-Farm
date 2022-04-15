@@ -22,7 +22,7 @@ public:
     static const std::string MAMMAL_NAME;
 
     //Constructors
-    Mammal( const float newMaxWeight, const std::string &newSpecies );
+    Mammal( Weight::typeWeight newMaxWeight, const std::string &newSpecies ) : Animal( newMaxWeight, MAMMAL_NAME, newSpecies ) {};
     Mammal( const Color newColor, const Gender newGender, const float newWeight, const float newMaxWeight, const std::string &newSpecies );
 
     //Getters

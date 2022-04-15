@@ -14,6 +14,7 @@
 #include <iomanip>
 
 #include "Weight.h"
+#include "config.h"
 
 const Weight::typeWeight Weight::KILOGRAMS_IN_A_SLUG = 14.59390 ;
 const Weight::typeWeight Weight::POUNDS_IN_A_KILOGRAM = 2.20462 ;
@@ -98,6 +99,15 @@ void Weight::setWeight(typeWeight newWeight, Weight::UnitOfWeight newUnit) {
     unitOfWeight = newUnit;
 }
 
+void Weight::setMaxWeight(Weight::typeWeight newMaxWeight) {
+    if(newMaxWeight <= 0 ) {
+        std::cout << PROGRAM_NAME << ": Invalid Max Weight" << std::endl;
+        return;
+    }
+    maximumWeight = newMaxWeight;
+    bWeightHasMax = true;
+}
+
 bool Weight::isWeightKnown() const noexcept {
     return bWeightIsKnown;
 }
@@ -136,7 +146,7 @@ void Weight::dump() const noexcept {
 }
 
 Weight::Weight() noexcept {
-
+    weight = UNKNOWN_WEIGHT;
 }
 
 Weight::Weight(typeWeight newWeight) {
@@ -196,6 +206,8 @@ Weight& Weight::operator+=(typeWeight rhs_addToWeight) {
     setWeight(lhs_weight);
     return *this;
 }
+
+
 
 std::ostream& operator<<( std::ostream& lhs_stream, const Weight::UnitOfWeight rhs_UnitOfWeight ) {
     switch( rhs_UnitOfWeight ) {

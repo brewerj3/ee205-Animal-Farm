@@ -20,11 +20,20 @@
 const std::string Animal::KINGDOM_NAME = "Animalia";
 
 Animal::Animal(Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies) {
+    animalWeight.setMaxWeight( newMaxWeight );
+    species = newSpecies;
+    classification = newClassification;
+    gender = Gender::UNKNOWN_GENDER;
 
 }
 
 Animal::Animal(const Gender newGender, const Weight::typeWeight newWeight, const Weight::typeWeight newMaxWeight,
                const std::string &newClassification, const std::string &newSpecies) {
+    gender = newGender;
+    animalWeight.setWeight( newWeight );
+    animalWeight.setMaxWeight( newMaxWeight );
+    species = newSpecies;
+    classification = newClassification;
 
 
 }
@@ -46,11 +55,11 @@ Gender Animal::getGender() const noexcept {
 }
 
 Weight::typeWeight Animal::getWeight() noexcept {
-    return Weight::getWeight();
+    return animalWeight.getWeight();
 }
 
 void Animal::setWeight(const Weight::typeWeight newWeight) {
-    Weight::setWeight(newWeight);
+    animalWeight.setWeight(newWeight);
 }
 
 void Animal::dump() const noexcept {
@@ -63,12 +72,12 @@ bool Animal::validate() const noexcept {
 }
 
 bool Animal::validateClassification(const std::string &checkClassification) noexcept {
-    //Check if Animal Classification is valid
+    //Check if Animal Classification is valid @TODO
     return false;
 }
 
 bool Animal::validateSpecies(const std::string &checkSpecies) noexcept {
-    //Check if Animal Species is Valid
+    //Check if Animal Species is Valid @TODO
     return false;
 }
 
