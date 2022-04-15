@@ -9,4 +9,23 @@
 /// @date   15_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+#pragma once
+
 #include "Node.h"
+
+class List{
+protected:
+    Node* head = nullptr;
+    unsigned int currentCount = 0; // Count of Objects
+
+public:
+    bool empty() const noexcept;
+    bool isInList( Node* nodeToCheck ) const;
+    bool isSorted() const noexcept;
+    virtual bool validate() const noexcept;
+
+    // gets the size of list
+    unsigned int size() const noexcept;
+
+    Node* getFirstInList() const noexcept;
+};
