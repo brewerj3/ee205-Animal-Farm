@@ -24,7 +24,11 @@ public:
     //Constructors
     Mammal( const float newMaxWeight, const std::string &newSpecies );
     Mammal( const Color newColor, const Gender newGender, const float newWeight, const float newMaxWeight, const std::string &newSpecies );
+
+    //Getters
     Color getColor() const noexcept;
+
+    //Setters
     void setColor( const Color newColor ) noexcept;
     void dump() const noexcept override;
 

@@ -12,4 +12,6 @@
 #include "Mammal.h"
 #include "Color.h"
 
+Color color = Color::UNKNOWN_COLOR;
+
 const std::string Mammal::MAMMAL_NAME = "Mammilian";

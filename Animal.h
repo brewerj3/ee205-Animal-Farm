@@ -17,13 +17,14 @@
 
 class Animal: public Node{
 private:
-    static const std::string KINGDOM_NAME;
     std::string species;
     std::string classification;
     Gender gender;
     Weight weight;
 
 public:
+    static const std::string KINGDOM_NAME;
+
     //Constructors
     Animal( float newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
     Animal( Gender newGender, float newWeight, float newMaxWeight, const std::string &newClassification, const std::string &newSpecies );

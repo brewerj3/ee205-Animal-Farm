@@ -37,3 +37,7 @@ bool Cat::validateName(const std::string& newName) {
     }
     return true;
 }
+
+Cat::Cat() {
+
+}

@@ -15,13 +15,18 @@
 #include "Weight.h"
 #include "Gender.h"
 #include "config.h"
+#include "Color.h"
+
+const std::string Animal::KINGDOM_NAME = "Animalia";
 
 Animal::Animal(float newMaxWeight, const std::string &newClassification, const std::string &newSpecies) {
 
+    Weight::setWeight(newMaxWeight);
 }
 
 Animal::Animal(const Gender newGender, const float newWeight, const float newMaxWeight,
                const std::string &newClassification, const std::string &newSpecies) {
+
 
 }
 
