@@ -13,9 +13,12 @@
 
 std::ostream& operator<<( std::ostream& lhs_stream, const Gender& rhs_gender ) {
     switch( rhs_gender ) {
-        case Gender::UNKNOWN_GENDER:    return lhs_stream << "Unknown gender";
-        case Gender::MALE:              return lhs_stream << "Male";
-        case Gender::FEMALE:            return lhs_stream << "Female";
+        case Gender::UNKNOWN_GENDER:    lhs_stream << "Unknown gender";
+        break;
+        case Gender::MALE:              lhs_stream << "Male";
+        break;
+        case Gender::FEMALE:            lhs_stream << "Female";
+        break;
         default:                throw std::out_of_range( "This unit can't be mapped to a string" );
     }
 

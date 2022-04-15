@@ -211,9 +211,12 @@ Weight& Weight::operator+=(typeWeight rhs_addToWeight) {
 
 std::ostream& operator<<( std::ostream& lhs_stream, const Weight::UnitOfWeight rhs_UnitOfWeight ) {
     switch( rhs_UnitOfWeight ) {
-        case Weight::POUND:     return lhs_stream << Weight::POUND_LABEL;
-        case Weight::KILOGRAM:  return lhs_stream << Weight::KILOGRAM_LABEL;
-        case Weight::SLUG:      return lhs_stream << Weight::SLUG_LABEL;
+        case Weight::POUND:     lhs_stream << Weight::POUND_LABEL;
+        break;
+        case Weight::KILOGRAM:  lhs_stream << Weight::KILOGRAM_LABEL;
+        break;
+        case Weight::SLUG:      lhs_stream << Weight::SLUG_LABEL;
+        break;
         default:                throw std::out_of_range( "This unit can't be mapped to a string" );
     }
 

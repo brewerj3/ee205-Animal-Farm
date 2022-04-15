@@ -31,7 +31,7 @@ public:
     Color getColor() const noexcept;
 
     //Setters
-    void setColor( const Color newColor ) noexcept;
+    void setColor( Color newColor ) noexcept;
 
     //Print out
     void dump() const noexcept override; //@TODO
