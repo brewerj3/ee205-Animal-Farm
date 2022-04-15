@@ -96,6 +96,7 @@ int main(){
 #endif
 
     Cat  firstCat( "Loki" );
+    std::cout << PROGRAM_NAME << ": Added Cat" << std::endl;
     firstCat.dump();
     //addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     //addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );

@@ -67,9 +67,9 @@ void Animal::dump() const noexcept {
     std::cout << std::boolalpha;
     std::string className = "Animal";
     FORMAT( className, "This" ) << this << std::endl;
-    FORMAT( className, "Classification" ) << Animal::classification << std::endl;
-    FORMAT( className, "Species" ) << Animal::species << std::endl;
-    FORMAT( className, "Gender" ) << Animal::gender << std::endl;
+    FORMAT( className, "Classification" ) << Animal::getClassification() << std::endl;
+    FORMAT( className, "Species" ) << Animal::getSpecies() << std::endl;
+    FORMAT( className, "Gender" ) << Animal::getGender() << std::endl;
     animalWeight.dump();
 }
 

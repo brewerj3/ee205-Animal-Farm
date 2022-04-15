@@ -57,7 +57,7 @@ public:
     // Print Method
     void dump();
 
-    // M<ake the cat say meow
+    // Make the cat say meow
     std::string speak() const noexcept override;
 
     // Validation Methods
