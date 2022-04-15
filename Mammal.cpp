@@ -24,3 +24,7 @@ void Mammal::setColor(const Color newColor) noexcept {
     color = newColor;
 }
 
+void Mammal::dump() const noexcept {
+    Animal::dump();
+}
+

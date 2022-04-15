@@ -31,7 +31,7 @@ public:
     static const std::string SPECIES_NAME;
 
     // Max Weight of Cats
-    static const float MAX_WEIGHT;
+    static const Weight::typeWeight MAX_WEIGHT;
 
     // Constructors
     explicit Cat( const std::string& newName ) : Mammal( MAX_WEIGHT, SPECIES_NAME ) {
@@ -39,7 +39,7 @@ public:
         name = newName;
         isFixed = false;
     }
-    Cat( std::string &newName, const Color newColor, const bool newIsFixed, const Gender newGender, const float newWeight
+    Cat( std::string &newName, const Color newColor, const bool newIsFixed, const Gender newGender, const Weight::typeWeight newWeight
     ) : Mammal( newColor, newGender, newWeight, MAX_WEIGHT, SPECIES_NAME ) {
         assert( validateName( newName) );
         name = newName;

@@ -19,12 +19,11 @@
 
 const std::string Animal::KINGDOM_NAME = "Animalia";
 
-Animal::Animal(Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies) {
+Animal::Animal( Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies ) {
     animalWeight.setMaxWeight( newMaxWeight );
     species = newSpecies;
     classification = newClassification;
     gender = Gender::UNKNOWN_GENDER;
-
 }
 
 Animal::Animal(const Gender newGender, const Weight::typeWeight newWeight, const Weight::typeWeight newMaxWeight,
@@ -34,8 +33,6 @@ Animal::Animal(const Gender newGender, const Weight::typeWeight newWeight, const
     animalWeight.setMaxWeight( newMaxWeight );
     species = newSpecies;
     classification = newClassification;
-
-
 }
 
 std::string Animal::getKingdom() const noexcept {
