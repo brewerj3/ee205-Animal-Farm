@@ -16,6 +16,3 @@ Color color = Color::UNKNOWN_COLOR;
 
 const std::string Mammal::MAMMAL_NAME = "Mammilian";
 
-Mammal::Mammal(const Weight::typeWeight newMaxWeight, const std::string &newSpecies) {
-
-}
