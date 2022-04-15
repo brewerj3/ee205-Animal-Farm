@@ -21,4 +21,11 @@ protected:
 public:
     static const std::string MAMMAL_NAME;
 
+    //Constructors
+    Mammal( const float newMaxWeight, const std::string &newSpecies );
+    Mammal( const Color newColor, const Gender newGender, const float newWeight, const float newMaxWeight, const std::string &newSpecies );
+    Color getColor() const noexcept;
+    void setColor( const Color newColor ) noexcept;
+    void dump() const noexcept override;
+
 };
