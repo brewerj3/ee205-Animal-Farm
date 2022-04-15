@@ -101,3 +101,7 @@ void Animal::setGender(const Gender newGender) {
     }
     std::cout << PROGRAM_NAME << "Cannot change a gender" << std::endl;
 }
+
+std::string Animal::speak() const noexcept {
+    return {};
+}
