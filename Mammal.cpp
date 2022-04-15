@@ -16,3 +16,11 @@ Color color = Color::UNKNOWN_COLOR;
 
 const std::string Mammal::MAMMAL_NAME = "Mammilian";
 
+Color Mammal::getColor() const noexcept {
+    return Mammal::color;
+}
+
+void Mammal::setColor(const Color newColor) noexcept {
+    color = newColor;
+}
+

@@ -23,7 +23,9 @@ public:
 
     //Constructors
     Mammal( Weight::typeWeight newMaxWeight, const std::string &newSpecies ) : Animal( newMaxWeight, MAMMAL_NAME, newSpecies ) {};
-    Mammal( const Color newColor, const Gender newGender, const float newWeight, const float newMaxWeight, const std::string &newSpecies );
+    Mammal( const Color newColor, const Gender newGender, const float newWeight, const float newMaxWeight, const std::string &newSpecies ) : Animal(newGender, newWeight, newMaxWeight, MAMMAL_NAME, newSpecies ) {
+        setColor( newColor );
+    };
 
     //Getters
     Color getColor() const noexcept;
@@ -32,6 +34,6 @@ public:
     void setColor( const Color newColor ) noexcept;
 
     //Print out
-    void dump() const noexcept override;
+    void dump() const noexcept override; //@TODO
 
 };
