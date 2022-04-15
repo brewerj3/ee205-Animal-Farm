@@ -11,76 +11,46 @@
 
 #pragma once
 
+#include "Mammal.h"
+
 #define MAX_NAME_LENGTH ( 50 )
-#define MAX_CATS ( 1024 )
-#define UNKNOWN_WEIGHT ( -1 )
 #define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
-
-
 
 enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 
-enum Color{BLACK, WHITE, RED, BLUE, GREEN, PINK};
-
-typedef float Weight;
-
 extern int currentNumberOfCats;
 
-class CatClass {
-private:
+class Cat: public Mammal {
+protected:
     std::string name;
-    Gender genderOfCat;
-    Breed breedOfCat;
     bool isFixed;
-    Weight weight;
-
 
 public:
-    CatClass *next = nullptr;
+    //Species Name
+    static const std::string SPECIES_NAME;
 
-    CatClass();
-    CatClass( std::string newName, Gender newGender, Breed newBreed, Weight newWeight);
+    //Max Weight of Cats
+    static const float MAX_WEIGHT;
 
-    //Zero out data function
-    void zeroCat();
+    //Check if name is valid
+    static bool validateName( std::string newName);
+
+
+    //Constructors
+    Cat();
+    Cat( std::string &newName, const Color newColor, const bool newIsFixed, const Gender newGender, const float newWeight );
 
     //getters
     std::string getName() const;
 
-    Gender getGenderOfCat() const;
-
-    Breed getBreedOfCat() const;
-
-    bool getIsFixed() const;
-
-    Weight getWeight() const;
-
     //setters
     void setNameOfCat( std::string newName );
 
-    void setIsFixed();
-
-    void setWeight(Weight weightToSet);
-
     // Print Method
-    bool print();
+    void dump();
 
     // Validation Method
     bool validate();
 
-    static bool validateName(const char *newName);
 
-    static bool validateGender(const Gender newGender);
-
-    static bool validateBreed(const Breed newBreed);
-
-    static bool validateWeight(const Weight newWeight);
-
-//protected: @TODO fix these and make them protected later
-    //protected setters
-    void setGenderOfCat(Gender genderToSet);
-
-    void setBreedOfCat(Breed breedToSet);
 };
-
-extern CatClass* catDatabaseHeadPointer;
