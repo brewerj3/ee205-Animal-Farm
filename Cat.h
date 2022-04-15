@@ -16,9 +16,7 @@
 #define MAX_NAME_LENGTH ( 50 )
 #define FORMAT_LINE( className, member ) cout << setw(8) << (className) << setw(20) << (member) << setw(52)
 
-enum Breed{UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX};
 
-extern int currentNumberOfCats;
 
 class Cat: public Mammal {
 protected:

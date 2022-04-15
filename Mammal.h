@@ -16,7 +16,7 @@
 
 class Mammal: public Animal{
 protected:
-    Color color;
+    Color color = Color::UNKNOWN_COLOR;
 
 public:
     static const std::string MAMMAL_NAME;
