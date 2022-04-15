@@ -39,6 +39,8 @@ void Cat::fixCat() noexcept {
 
 void Cat::dump() {
 
+
+
 }
 
 std::string Cat::speak() const noexcept {

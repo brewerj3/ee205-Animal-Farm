@@ -10,6 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
+#include <iomanip>
 
 #include "Animal.h"
 #include "Weight.h"
@@ -60,7 +61,16 @@ void Animal::setWeight(const Weight::typeWeight newWeight) {
 }
 
 void Animal::dump() const noexcept {
-//@TODO add dump
+    std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
+    std::cout << std::setfill( ' ' );
+    std::cout << std::left;
+    std::cout << std::boolalpha;
+    std::string className = "Animal";
+    FORMAT( className, "This" ) << this << std::endl;
+    FORMAT( className, "Classification" ) << Animal::classification << std::endl;
+    FORMAT( className, "Species" ) << Animal::species << std::endl;
+    FORMAT( className, "Gender" ) << Animal::gender << std::endl;
+    animalWeight.dump();
 }
 
 bool Animal::validate() const noexcept {

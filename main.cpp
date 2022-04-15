@@ -95,7 +95,7 @@ int main(){
    }
 #endif
 
-    //addCat( new CatClass( "Loki",   MALE,           PERSIAN,    1.0 ) );
+    Cat  firstCat( "Loki" );
     //addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     //addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
     //addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );

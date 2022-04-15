@@ -9,8 +9,13 @@
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
+
+#include <iomanip>
+
 #include "Mammal.h"
 #include "Color.h"
+#include "config.h"
+
 
 Color color = Color::UNKNOWN_COLOR;
 
@@ -26,5 +31,14 @@ void Mammal::setColor(const Color newColor) noexcept {
 
 void Mammal::dump() const noexcept {
     Animal::dump();
+    std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
+    std::cout << std::setfill( ' ' );
+    std::cout << std::left;
+    std::cout << std::boolalpha;
+    std::string className = "Mammal";
+    FORMAT( className, "This" ) << this << std::endl;
+    FORMAT( className, "Mammal Name" ) << Mammal::MAMMAL_NAME << std::endl;
+    FORMAT( className, "Color" ) << Mammal::color << std::endl;
+
 }
 

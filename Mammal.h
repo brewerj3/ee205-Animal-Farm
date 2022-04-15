@@ -36,6 +36,6 @@ public:
     void setColor( Color newColor ) noexcept;
 
     //Print out
-    void dump() const noexcept override; //@TODO
+    void dump() const noexcept override;
 
 };
