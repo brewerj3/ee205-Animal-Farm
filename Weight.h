@@ -16,6 +16,10 @@ class Weight{
 public:
     enum UnitOfWeight{ POUND, SLUG, KILOGRAM }; //Pounds and Newtons are measures of force, Kilogram is a measure of Mass
 
+    //Typedef of Weight
+    typedef float typeWeight;
+
+    //static constants
     static const float KILOGRAMS_IN_A_SLUG;
     static const float POUNDS_IN_A_KILOGRAM;
     static const float UNKNOWN_WEIGHT;
@@ -34,14 +38,14 @@ public:
     static float convertWeight( float fromWeight, UnitOfWeight fromUnit, UnitOfWeight toUnit ) noexcept;
 
     //getters
-    static float getWeight() const noexcept;
-    float getWeight( UnitOfWeight weightUnit ) const noexcept;
-    float getMaxWeight() const noexcept;
+    static typeWeight getWeight() const noexcept;
+    typeWeight getWeight( UnitOfWeight weightUnit ) const noexcept;
+    typeWeight getMaxWeight() const noexcept;
     UnitOfWeight getWeightUnit() const noexcept;
 
     //setters
-    static void setWeight(float newWeight );
-    void setWeight( float newWeight, UnitOfWeight newUnit );
+    static void setWeight(typeWeight newWeight );
+    void setWeight( typeWeight newWeight, UnitOfWeight newUnit );
 
     //bools
     bool isWeightKnown() const noexcept;
@@ -53,23 +57,24 @@ public:
     void dump() const noexcept;
 
     //Constructors
-    Weight() noexcept;
-    Weight( float newWeight );
-    Weight( UnitOfWeight newUnitOfWeight ) noexcept;
-    Weight( float newWeight, UnitOfWeight newUnitOfWeight );
-    Weight( float newWeight, float newMaxWeight );
-    Weight( UnitOfWeight newUnitOfWeight, float newMaxWeight );
-    Weight( float newWeight, UnitOfWeight newUnitOfWeight, float newMaxWeight );
+    explicit Weight() noexcept;
+    explicit Weight( typeWeight newWeight );
+    explicit Weight( UnitOfWeight newUnitOfWeight ) noexcept;
+    explicit Weight( typeWeight newWeight, UnitOfWeight newUnitOfWeight );
+    explicit Weight( typeWeight newWeight, typeWeight newMaxWeight );
+    explicit Weight( UnitOfWeight newUnitOfWeight, typeWeight newMaxWeight );
+    explicit Weight( typeWeight newWeight, UnitOfWeight newUnitOfWeight, typeWeight newMaxWeight );
 
     //Operators
     bool operator==(const Weight& rhs_Weight ) const ;
     bool operator<(const Weight& rhs_Weight ) const ;
-    Weight& operator+=( float rhs_addToWeight );
+    Weight& operator+=( typeWeight rhs_addToWeight );
+
 
 private:
     UnitOfWeight unitOfWeight = POUND;
-    float weight = UNKNOWN_WEIGHT;
-    float maximumWeight;
+    typeWeight weight = UNKNOWN_WEIGHT;
+    typeWeight maximumWeight;
     bool bWeightHasMax = false;
     bool bWeightIsKnown = false;
 };

@@ -20,24 +20,24 @@ private:
     std::string species;
     std::string classification;
     Gender gender;
-    Weight weight;
+    Weight animalWeight;
 
 public:
     static const std::string KINGDOM_NAME;
 
     //Constructors
-    Animal( float newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
-    Animal( Gender newGender, float newWeight, float newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
+    Animal( Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
+    Animal( Gender newGender, Weight::typeWeight newWeight, Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
 
     //Getters
     std::string getKingdom() const noexcept;
     std::string getClassification() const noexcept;
     std::string getSpecies() const noexcept;
     Gender getGender() const noexcept;
-    float getWeight() const noexcept;
+    static Weight::typeWeight getWeight() noexcept;
 
     //Setters
-    void setWeight( float newWeight );
+    static void setWeight( Weight::typeWeight newWeight );
 
     //Speak
     virtual std::string speak() const noexcept; //@TODO add definition
@@ -50,4 +50,6 @@ public:
     static bool validateClassification(const std::string &checkClassification ) noexcept;
     static bool validateSpecies( const std::string &checkSpecies ) noexcept;
     void setGender(Gender newGender );
+
+
 };

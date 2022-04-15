@@ -30,6 +30,8 @@ public:
 
     //Setters
     void setColor( const Color newColor ) noexcept;
+
+    //Print out
     void dump() const noexcept override;
 
 };
