@@ -39,6 +39,10 @@ bool List::isListSorted() const noexcept {
     return false; //the list will not be sorted.
 }
 
+Node *List::get_next(const Node *currentNode) {
+    return currentNode->next;
+}
+
 Node *List::getFirstInList() const noexcept {
     return head;
 }
@@ -51,3 +55,4 @@ void List::deleteAllNodes() noexcept {
         currentCount--; //count down by 1
     }
 }
+

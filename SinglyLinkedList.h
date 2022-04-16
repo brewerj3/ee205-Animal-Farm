@@ -21,7 +21,7 @@ public:
 
     //List handling
     void push_front( Node* newNode );
-    Node* pop_front() noexcept overide;
+    Node* pop_front() noexcept override;
     void insert_after( Node* currentNode, Node* newNode );
     void dump() const noexcept override;
     bool validate() const noexcept override;
