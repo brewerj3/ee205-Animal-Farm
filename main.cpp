@@ -98,6 +98,8 @@ int main(){
     Cat  firstCat( "Loki" );
     std::cout << PROGRAM_NAME << ": Added Cat" << std::endl;
     firstCat.dump();
+    firstCat.setWeight( 1.1 );
+    firstCat.dump();
     //addCat( new CatClass( "Milo",   MALE,           MANX,       1.1 ) );
     //addCat( new CatClass( "Bella",  FEMALE,         MAINE_COON, 1.2 ) );
     //addCat( new CatClass( "Kali",   FEMALE,         SHORTHAIR,  1.3 ) );
