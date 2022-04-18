@@ -31,12 +31,7 @@ void Mammal::setColor(const Color newColor) noexcept {
 
 void Mammal::dump() const noexcept {
     Animal::dump();
-    //std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
-    //std::cout << std::setfill( ' ' );
-    //std::cout << std::left;
-    //std::cout << std::boolalpha;
     std::string className = "Mammal";
-    FORMAT( className, "Mammal Name" ) << Mammal::MAMMAL_NAME << std::endl;
     FORMAT( className, "Color" ) << Mammal::color << std::endl;
 
 }

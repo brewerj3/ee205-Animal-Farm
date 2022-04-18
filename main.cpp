@@ -37,6 +37,9 @@ int main(){
         std::cout << pointerToAnimal->speak() << std::endl;
     }
 
+    catDatabase.validate();
+    catDatabase.dump();
+    catDatabase.deleteAllNodes();
     catDatabase.dump();
 
     std::cout << "Done with " << PROGRAM_NAME << std::endl;

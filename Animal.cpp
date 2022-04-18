@@ -25,6 +25,7 @@ Animal::Animal( Weight::typeWeight newMaxWeight, const std::string &newClassific
     species = newSpecies;
     classification = newClassification;
     gender = Gender::UNKNOWN_GENDER;
+
 }
 
 Animal::Animal(const Gender newGender, const Weight::typeWeight newWeight, const Weight::typeWeight newMaxWeight,

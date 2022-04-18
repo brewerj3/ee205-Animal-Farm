@@ -58,9 +58,7 @@ Node *List::getFirstInList() const noexcept {
 void List::deleteAllNodes() noexcept {
     countCurrentNumberOfObjects(); //count number of Objects in list
     while( head != nullptr ) {
-        Node* nodeToDelete = head; //save location of Node to delete
-        head = head->next; //move head to next in list
-        delete nodeToDelete; //delete node
+        delete pop_front(); //delete node
         currentCount--; //count down by 1
     }
 }

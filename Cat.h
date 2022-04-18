@@ -52,7 +52,7 @@ public:
     void fixCat() noexcept;
 
     // Print Method
-    void dump();
+    void dump() const noexcept override;
 
     // Make the cat say meow
     std::string speak() const noexcept override;
