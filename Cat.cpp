@@ -39,10 +39,10 @@ void Cat::fixCat() noexcept {
 
 void Cat::dump() {
     Mammal::dump();
-    std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
-    std::cout << std::setfill( ' ' );
-    std::cout << std::left;
-    std::cout << std::boolalpha;
+    //std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
+    //std::cout << std::setfill( ' ' );
+    //std::cout << std::left;
+    //std::cout << std::boolalpha;
     std::string className = "Cat";
     FORMAT( className, "This" ) << this << std::endl;
     FORMAT( className, "Cat name" ) << Cat::getName() << std::endl;

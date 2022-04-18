@@ -18,8 +18,7 @@
 #include "SinglyLinkedList.h"
 #include "config.h"
 
-#define MAX_NAME1    "1234567890123456789012345678901234567890123456789"
-#define ILLEGAL_NAME "12345678901234567890123456789012345678901234567890"
+
 
 int main(){
     std::cout << "Starting " << PROGRAM_NAME << std::endl;

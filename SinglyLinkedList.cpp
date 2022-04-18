@@ -33,7 +33,10 @@ void SinglyLinkedList::insert_after(Node *currentNode, Node *newNode) {
 }
 
 void SinglyLinkedList::dump() const noexcept {
-
+    std::cout <<  "SinglyLinkedList: head =[" << List::head << "]" << std::endl;
+    for( Node* iterateOverList = head; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
+        iterateOverList->dump();
+    }
 }
 
 bool SinglyLinkedList::validate() const noexcept { //I am not sure what to check for exactly

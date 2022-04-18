@@ -61,10 +61,10 @@ void Animal::setWeight(const Weight::typeWeight newWeight) {
 }
 
 void Animal::dump() const noexcept {
-    std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
-    std::cout << std::setfill( ' ' );
-    std::cout << std::left;
-    std::cout << std::boolalpha;
+    //std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
+    //std::cout << std::setfill( ' ' );
+    //std::cout << std::left;
+    //std::cout << std::boolalpha;
     std::string className = "Animal";
     FORMAT( className, "This" ) << this << std::endl;
     FORMAT( className, "Classification" ) << Animal::getClassification() << std::endl;
