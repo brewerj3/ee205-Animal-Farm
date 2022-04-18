@@ -43,6 +43,6 @@ public:
     // Remove first Node in list
     virtual Node* pop_front() noexcept = 0;
 
-
-
+    //Count objects in list
+    void countCurrentNumberOfObjects();
 };

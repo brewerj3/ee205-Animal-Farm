@@ -15,9 +15,17 @@
 
 bool List::empty() const noexcept{
 
+    if( currentCount == 0 ) {
+        return true;
+    }
+    if( currentCount < 0 ) {
+        std::cout << PROGRAM_NAME << ": Something is wrong with currentCount" << std::endl;
+        return false;
+    }
+    return false;
 }
 
-bool List::isInList(Node *nodeToCheck) const {
+bool List::isInList( Node *nodeToCheck ) const {
     Node* iterateOverList = head;
     while( iterateOverList != nullptr ) {
         if( iterateOverList == nodeToCheck ) {
@@ -36,7 +44,7 @@ unsigned int List::size() const noexcept {
 }
 
 bool List::isListSorted() const noexcept {
-    return false; //the list will not be sorted.
+    return false; //the list is not required to be sorted. Yet.
 }
 
 Node *List::get_next(const Node *currentNode) {
@@ -48,11 +56,19 @@ Node *List::getFirstInList() const noexcept {
 }
 
 void List::deleteAllNodes() noexcept {
+    countCurrentNumberOfObjects(); //count number of Objects in list
     while( head != nullptr ) {
         Node* nodeToDelete = head; //save location of Node to delete
         head = head->next; //move head to next in list
         delete nodeToDelete; //delete node
         currentCount--; //count down by 1
+    }
+}
+
+void List::countCurrentNumberOfObjects() {
+    currentCount = 0;
+    for(Node* iterateOverList = head; iterateOverList != nullptr; iterateOverList = iterateOverList->next) {
+        currentCount++;
     }
 }
 
