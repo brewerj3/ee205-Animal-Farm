@@ -32,6 +32,10 @@ protected:
 
 public:
     virtual void dump() const {
+        std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
+        std::cout << std::setfill( ' ' );
+        std::cout << std::left;
+        std::cout << std::boolalpha;
         std::string className = "Node";
         FORMAT( className, "This" ) << this << std::endl;
         FORMAT( className, "Next pointer" ) << next << std::endl;

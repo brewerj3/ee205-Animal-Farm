@@ -15,7 +15,7 @@ SinglyLinkedList::SinglyLinkedList() {
 }
 
 void SinglyLinkedList::push_front(Node *newNode) {
-    Node* nodeToPush = get_next( newNode ); //get independent pointer to first node in list
+    Node* nodeToPush = head; //get independent pointer to first node in list
     head = newNode; //make head point to new node
     newNode->next = nodeToPush; //make new node point to the previously first node
 }

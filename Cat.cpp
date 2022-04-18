@@ -44,7 +44,6 @@ void Cat::dump() {
     //std::cout << std::left;
     //std::cout << std::boolalpha;
     std::string className = "Cat";
-    FORMAT( className, "This" ) << this << std::endl;
     FORMAT( className, "Cat name" ) << Cat::getName() << std::endl;
     FORMAT( className, "Is the cat fixed" ) << Cat::isFixed << std::endl;
 }

@@ -36,7 +36,6 @@ void Mammal::dump() const noexcept {
     //std::cout << std::left;
     //std::cout << std::boolalpha;
     std::string className = "Mammal";
-    FORMAT( className, "This" ) << this << std::endl;
     FORMAT( className, "Mammal Name" ) << Mammal::MAMMAL_NAME << std::endl;
     FORMAT( className, "Color" ) << Mammal::color << std::endl;
 
