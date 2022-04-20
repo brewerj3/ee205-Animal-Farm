@@ -61,6 +61,7 @@ void List::deleteAllNodes() noexcept {
         delete pop_front(); //delete node
         currentCount--; //count down by 1
     }
+    head = nullptr;
 }
 
 void List::countCurrentNumberOfObjects() {
@@ -69,4 +70,3 @@ void List::countCurrentNumberOfObjects() {
         currentCount++;
     }
 }
-

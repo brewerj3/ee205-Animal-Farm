@@ -13,6 +13,6 @@
 
 #define FORMAT( className, member ) std::cout << std::setw(8) << (className) << std::setw(20) << (member) << std::setw(52)
 
-//#define DEBUG
+#define DEBUG
 
-//#define DEBUG_DELETE
+

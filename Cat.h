@@ -60,6 +60,4 @@ public:
     // Validation Methods
     bool validate();
     static bool validateName( const std::string& newName );
-
-
 };
