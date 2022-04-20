@@ -15,8 +15,6 @@
 
 #include "Mammal.h"
 
-#define MAX_NAME_LENGTH ( 50 )
-
 class Cat: public Mammal {
 protected:
     std::string name;   // Name of the Cat

@@ -13,7 +13,6 @@
 
 #include "Node.h"
 
-
 class List{
 protected:
     Node* head = nullptr;

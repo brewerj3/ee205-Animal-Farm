@@ -16,10 +16,7 @@
 #include "Color.h"
 #include "config.h"
 
-
-Color color = Color::UNKNOWN_COLOR;
-
-const std::string Mammal::MAMMAL_NAME = "Mammilian";
+const std::string Mammal::MAMMAL_NAME = "Mammalian";
 
 Color Mammal::getColor() const noexcept {
     return Mammal::color;

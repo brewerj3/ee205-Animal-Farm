@@ -52,6 +52,4 @@ public:
     static bool validateClassification(const std::string &checkClassification ) noexcept;
     static bool validateSpecies( const std::string &checkSpecies ) noexcept;
     void setGender(Gender newGender );
-
-
 };

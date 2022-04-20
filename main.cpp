@@ -9,16 +9,11 @@
 /// @date   14_Apr_2022
 ///////////////////////////////////////////////////////////////////////////////
 
-
 #include <iostream>
-#include <cassert>
-#include <cstring>
 
 #include "Cat.h"
 #include "SinglyLinkedList.h"
 #include "config.h"
-
-
 
 int main(){
     std::cout << "Starting " << PROGRAM_NAME << std::endl;

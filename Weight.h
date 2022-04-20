@@ -72,7 +72,6 @@ public:
     bool operator<(const Weight& rhs_Weight ) const ;
     Weight& operator+=( typeWeight rhs_addToWeight );
 
-
 private:
     UnitOfWeight unitOfWeight = POUND;
     typeWeight weight {};

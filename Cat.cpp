@@ -10,14 +10,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-#include <cstring>
 #include <iomanip>
 
 #include "Cat.h"
 #include "config.h"
-
-
-int currentNumberOfCats = 0;
 
 const std::string Cat::SPECIES_NAME = "Felis Catus";
 const Weight::typeWeight Cat::MAX_WEIGHT = 40;

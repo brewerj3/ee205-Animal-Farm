@@ -16,7 +16,6 @@
 #include "Weight.h"
 #include "Gender.h"
 #include "config.h"
-#include "Color.h"
 
 const std::string Animal::KINGDOM_NAME = "Animalia";
 
@@ -63,10 +62,6 @@ void Animal::setWeight(const Weight::typeWeight newWeight) {
 
 void Animal::dump() const noexcept {
     Node::dump();
-    //std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
-    //std::cout << std::setfill( ' ' );
-    //std::cout << std::left;
-    //std::cout << std::boolalpha;
     std::string className = "Animal";
     FORMAT( className, "Kingdom" ) << Animal::KINGDOM_NAME << std::endl;
     FORMAT( className, "Classification" ) << Animal::getClassification() << std::endl;
