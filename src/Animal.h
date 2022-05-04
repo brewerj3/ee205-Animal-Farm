@@ -17,6 +17,7 @@
 #include "Gender.h"
 #include "Node.h"
 
+/// This class contains information about a Animal and inherits from Node to create a Singly Linked List
 class Animal: public Node{
 private:
     std::string species; ///< The name of the Animal species
