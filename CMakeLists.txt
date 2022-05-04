@@ -104,3 +104,27 @@ add_executable( animalFarm
         src/Color.cpp src/Color.h
         src/List.cpp src/List.h
         src/SinglyLinkedList.cpp src/SinglyLinkedList.h)
+
+add_executable( animalFarmdos
+        src/config.h
+        src/Cat.cpp src/Cat.h
+        src/Node.h
+        src/Animal.cpp src/Animal.h
+        src/Weight.cpp src/Weight.h
+        src/Gender.cpp src/Gender.h
+        src/Mammal.cpp src/Mammal.h
+        src/Color.cpp src/Color.h
+        src/List.cpp src/List.h
+        src/SinglyLinkedList.cpp src/SinglyLinkedList.h)
+
+add_executable( animalFarmtres
+        src/config.h
+        src/Cat.cpp src/Cat.h
+        src/Node.h
+        src/Animal.cpp src/Animal.h
+        src/Weight.cpp src/Weight.h
+        src/Gender.cpp src/Gender.h
+        src/Mammal.cpp src/Mammal.h
+        src/Color.cpp src/Color.h
+        src/List.cpp src/List.h
+        src/SinglyLinkedList.cpp src/SinglyLinkedList.h)
