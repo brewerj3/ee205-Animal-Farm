@@ -15,6 +15,7 @@
 #include "SinglyLinkedList.h"
 #include "config.h"
 
+/// A simple test of the Program
 int main(){
     std::cout << "Starting " << PROGRAM_NAME << std::endl;
 

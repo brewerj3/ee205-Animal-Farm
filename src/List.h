@@ -16,8 +16,8 @@
 /// A Object that holds a SinglyLinkedList of Animal Objects
 class List{
 protected:
-    Node* head = nullptr;            /// The Head pointer of the list/where it starts
-    unsigned int currentCount = 0;   /// Count of Objects in list
+    Node* head = nullptr;            ///< The Head pointer of the list/where it starts
+    unsigned int currentCount = 0;   ///< Count of Objects in list
 
 public:
     bool empty() const noexcept;                    ///< Check if the list is empty

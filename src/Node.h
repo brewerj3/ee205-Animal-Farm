@@ -55,7 +55,7 @@ public:
         }
         return true;
     }
-
+    /// A virtual operator to compare two Node addresses
     virtual bool operator>( const Node& rightSide ) {
         return compareByAddress( this, &(Node&)rightSide );
     }

@@ -207,8 +207,7 @@ Weight& Weight::operator+=(typeWeight rhs_addToWeight) {
     return *this;
 }
 
-
-
+/// Output the correct UnitOfWeight when printing to output
 std::ostream& operator<<( std::ostream& lhs_stream, const Weight::UnitOfWeight rhs_UnitOfWeight ) {
     switch( rhs_UnitOfWeight ) {
         case Weight::POUND:     lhs_stream << Weight::POUND_LABEL;

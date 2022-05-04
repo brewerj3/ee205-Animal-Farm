@@ -16,7 +16,8 @@
 /// Class Weight holds a unit of weight and a typedef weight
 class Weight{
 public:
-    enum UnitOfWeight{ POUND, SLUG, KILOGRAM }; ///< Pounds and Newtons are measures of force, Kilogram is a measure of Mass
+    /// Pounds and Newtons are measures of force, Kilogram is a measure of Mass
+    enum UnitOfWeight{ POUND, SLUG, KILOGRAM };
 
     //Typedef of Weight
     typedef float typeWeight; ///< typedef weight is a float named typeWeight
@@ -69,9 +70,9 @@ public:
     explicit Weight( typeWeight newWeight, UnitOfWeight newUnitOfWeight, typeWeight newMaxWeight ); ///< Create a weight object with a weight, unit and maximum weight
 
     //Operators
-    bool operator==(const Weight& rhs_Weight ) const ;
-    bool operator<(const Weight& rhs_Weight ) const ;
-    Weight& operator+=( typeWeight rhs_addToWeight );
+    bool operator==(const Weight& rhs_Weight ) const ;  ///< Check if two weights are equal
+    bool operator<(const Weight& rhs_Weight ) const ;   ///< Check if one weight is larger than another
+    Weight& operator+=( typeWeight rhs_addToWeight );   ///< Add one weight to another
 
 private:
     UnitOfWeight unitOfWeight = POUND;      ///< holds the unit of weight, defaults to pound
@@ -81,4 +82,5 @@ private:
     bool bWeightIsKnown = false;            ///< tells if the weight is known
 };
 
-std::ostream& operator<<( std::ostream& lhs_stream, Weight::UnitOfWeight rhs_UnitOfWeight ); ///< outputs the correct name of the unit of weight
+/// outputs the correct name of the unit of weight
+std::ostream& operator<<( std::ostream& lhs_stream, Weight::UnitOfWeight rhs_UnitOfWeight );
