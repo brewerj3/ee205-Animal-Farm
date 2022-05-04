@@ -19,13 +19,13 @@
 
 class Animal: public Node{
 private:
-    std::string species;
-    std::string classification;
-    Gender gender;
-    Weight animalWeight;
+    std::string species; ///< The name of the Animal species
+    std::string classification; ///< The Animal classification
+    Gender gender; ///< The gender of the Animal
+    Weight animalWeight; ///< The weight of the animal
 
 public:
-    static const std::string KINGDOM_NAME;
+    static const std::string KINGDOM_NAME; ///< The Kingdom name of the Animal
 
     //Constructors
     Animal( Weight::typeWeight newMaxWeight, const std::string& newClassification, const std::string& newSpecies );
