@@ -55,10 +55,10 @@ bool Cat::validate() {
 }
 
 bool Cat::validateName( const std::string& newName ) {
-    if( newName.length() > MAX_NAME_LENGTH ) {
-        std::cout << PROGRAM_NAME << ": Name is to long" << std::endl;
-        return false;
-    }
+    //if( newName.length() > MAX_NAME_LENGTH ) {
+        //std::cout << PROGRAM_NAME << ": Name is to long" << std::endl;
+        //return false;
+    //}
     if( newName.length() <= 0 ) {
         std::cout << PROGRAM_NAME << ": Name is too short" << std::endl;
         return false;
