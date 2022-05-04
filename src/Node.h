@@ -16,13 +16,15 @@
 
 #include "config.h"
 
+/// A class that contains the Animal Object and pointer to the next Node
 class Node{
-    friend class List;
-    friend class SinglyLinkedList;
+    friend class List;              ///< List is a Friend
+    friend class SinglyLinkedList;  ///< SinglyLinkedList is a Friend
 
 protected:
-    Node* next = nullptr;
+    Node* next = nullptr;   ///< Points to the next Node
 
+    ///Compares the address of two Nodes
     static bool compareByAddress( const Node* node1, const Node* node2 ) {
         if( node1 < node2 ) {
             return false;
@@ -31,6 +33,7 @@ protected:
     }
 
 public:
+    /// Dumps the Node to output
     virtual void dump() const {
         std::cout << std::setw(80) << std::setfill( '=' ) << "" << std::endl;
         std::cout << std::setfill( ' ' );
@@ -40,6 +43,7 @@ public:
         FORMAT( className, "This" ) << this << std::endl;
         FORMAT( className, "Next pointer" ) << next << std::endl;
     }
+    /// Checks if the Node is Valid
     virtual bool validate() const noexcept {
         if( next == nullptr ) {
             return true;
