@@ -13,35 +13,36 @@
 
 #include "Node.h"
 
+/// A Object that holds a SinglyLinkedList of Animal Objects
 class List{
 protected:
-    Node* head = nullptr;
-    unsigned int currentCount = 0; // Count of Objects
+    Node* head = nullptr;            /// The Head pointer of the list/where it starts
+    unsigned int currentCount = 0;   /// Count of Objects in list
 
 public:
-    bool empty() const noexcept;
-    bool isInList( Node* nodeToCheck ) const;
-    bool isListSorted() const noexcept;
-    virtual bool validate() const noexcept = 0;
+    bool empty() const noexcept;                    ///< Check if the list is empty
+    bool isInList( Node* nodeToCheck ) const;       ///< Check if a Node is in the list
+    bool isListSorted() const noexcept;             ///< Check if list is sorted, the list is never sorted so this is always false
+    virtual bool validate() const noexcept = 0;     ///< Check if List is valid
 
     // gets next node in list
-    static Node* get_next(const Node* currentNode );
+    static Node* get_next(const Node* currentNode );    ///< Get the Next node in a list given a Node already in the list
 
     // gets the size of list
-    unsigned int size() const noexcept;
+    unsigned int size() const noexcept;                 ///< Get the current size of the list
 
     // Get the first node in the list
-    Node* getFirstInList() const noexcept;
+    Node* getFirstInList() const noexcept;              ///< Get the first Node in the list
 
     //Delete all nodes
-    void deleteAllNodes() noexcept;
+    void deleteAllNodes() noexcept;                     ///< Delete all the Nodes
 
     //Dump list
-    virtual void dump() const noexcept = 0;
+    virtual void dump() const noexcept = 0;             ///< Dump the contents of a Node
 
     // Remove first Node in list
-    virtual Node* pop_front() noexcept = 0;
+    virtual Node* pop_front() noexcept = 0;             ///< Remove the first Node in the list and return it
 
     //Count objects in list
-    void countCurrentNumberOfObjects();
+    void countCurrentNumberOfObjects();                 ///< Count the current number of objects in a list
 };
