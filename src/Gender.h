@@ -13,6 +13,8 @@
 
 #include <iostream>
 
-enum class Gender{UNKNOWN_GENDER =0, MALE, FEMALE};     ///< Enum class containing the Genders a animal can have
+/// Enum class containing the Genders a animal can have
+enum class Gender{UNKNOWN_GENDER =0, MALE, FEMALE};
 
-std::ostream& operator<<( std::ostream& lhs_stream, const Gender& rhs_gender );     ///< When outputting output the Names of the gender enum class
+/// When outputting output the Names of the gender enum class
+std::ostream& operator<<( std::ostream& lhs_stream, const Gender& rhs_gender );

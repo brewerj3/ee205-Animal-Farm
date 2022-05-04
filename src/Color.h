@@ -13,6 +13,8 @@
 
 #include <iostream>
 
-enum class Color{ UNKNOWN_COLOR, BLACK, BROWN, WHITE, RED, BLUE, GINGER, CREAM, CINNAMON, CALICO }; ///< enum class
+/// enum class
+enum class Color{ UNKNOWN_COLOR, BLACK, BROWN, WHITE, RED, BLUE, GINGER, CREAM, CINNAMON, CALICO };
 
-std::ostream& operator<<( std::ostream& lhs_stream, const Color& rhs_Color ); ///< Makes print out use the color names
+/// Makes print out use the color names
+std::ostream& operator<<( std::ostream& lhs_stream, const Color& rhs_Color );
