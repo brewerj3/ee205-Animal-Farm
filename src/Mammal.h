@@ -32,7 +32,7 @@ public:
     };
 
     //Getters
-    Color getColor() const noexcept;    ///< Get the Color
+    Color getColor() const noexcept;            ///< Get the Color
 
     //Setters
     void setColor( Color newColor ) noexcept;   ///< Set the Color
