@@ -28,28 +28,32 @@ public:
     static const std::string KINGDOM_NAME; ///< The Kingdom name of the Animal
 
     //Constructors
+    /// Create a simple Animal object
     Animal( Weight::typeWeight newMaxWeight, const std::string& newClassification, const std::string& newSpecies );
+
+    /// Create a complex Animal object
     Animal( Gender newGender, Weight::typeWeight newWeight, Weight::typeWeight newMaxWeight, const std::string &newClassification, const std::string &newSpecies );
 
     //Getters
-    std::string getKingdom() const noexcept;
-    std::string getClassification() const noexcept;
-    std::string getSpecies() const noexcept;
-    Gender getGender() const noexcept;
-    Weight::typeWeight getWeight() noexcept;
+    std::string getKingdom() const noexcept;        ///< Get the Kingdom
+    std::string getClassification() const noexcept; ///< Get the Classification
+    std::string getSpecies() const noexcept;        ///< Get the Species
+    Gender getGender() const noexcept;              ///< Get the Gender
+    Weight::typeWeight getWeight() noexcept;        ///< Get the Weight
 
     //Setters
-    void setWeight( Weight::typeWeight newWeight );
+    void setWeight( Weight::typeWeight newWeight ); ///< Set the Weight
 
     //Speak
-    virtual std::string speak() const noexcept; //@TODO add definition
+    virtual std::string speak() const noexcept; ///< Make the Animal say something
+    void setGender(Gender newGender );          ///< Set the gender of the Animal
 
     //Print out
-    void dump() const noexcept override;
+    void dump() const noexcept override; ///< Dump the contents of the object
 
     //Validation
-    bool validate() const noexcept override;
-    static bool validateClassification(const std::string &checkClassification ) noexcept;
-    static bool validateSpecies( const std::string &checkSpecies ) noexcept;
-    void setGender(Gender newGender );
+    bool validate() const noexcept override;                                                ///< Check if the object is valid
+    static bool validateClassification(const std::string &checkClassification ) noexcept;   ///< validate the Classification
+    static bool validateSpecies( const std::string &checkSpecies ) noexcept;                ///< validate the species
+
 };
