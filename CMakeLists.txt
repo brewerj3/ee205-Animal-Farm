@@ -105,7 +105,7 @@ add_executable( animalFarm
         src/List.cpp src/List.h
         src/SinglyLinkedList.cpp src/SinglyLinkedList.h)
 
-add_executable( animalFarmdos
+add_executable( animalFarm dos
         src/config.h
         src/Cat.cpp src/Cat.h
         src/Node.h
@@ -117,7 +117,7 @@ add_executable( animalFarmdos
         src/List.cpp src/List.h
         src/SinglyLinkedList.cpp src/SinglyLinkedList.h)
 
-add_executable( animalFarmtres
+add_executable( animalFarm-tres
         src/config.h
         src/Cat.cpp src/Cat.h
         src/Node.h

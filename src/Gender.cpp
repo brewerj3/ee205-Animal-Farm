@@ -21,5 +21,5 @@ std::ostream& operator<<( std::ostream& lhs_stream, const Gender& rhs_gender ) {
         break;
         default:                throw std::out_of_range( "This unit can't be mapped to a string" );
     }
-
+    throw std::out_of_range( " Somethings wrong" );
 }
